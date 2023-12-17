@@ -1,0 +1,7 @@
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\obj\Debug\MediaGeralPOO.csproj.AssemblyReference.cache
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\obj\Debug\MediaGeralPOO.csproj.CoreCompileInputs.cache
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\bin\Debug\MediaGeralPOO.exe.config
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\bin\Debug\MediaGeralPOO.exe
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\bin\Debug\MediaGeralPOO.pdb
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\obj\Debug\MediaGeralPOO.exe
+C:\Users\morei\Desktop\Arquivos\Estudo\Programação\C#\MediaGeralPOO\MediaGeralPOO\obj\Debug\MediaGeralPOO.pdb
