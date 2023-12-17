@@ -38,12 +38,18 @@ namespace MediaGeralPOO
                         notas_aluno = int.Parse(Console.ReadLine());
                     alunos[i] = new Aluno(nome_aluno, notas_aluno);
                     alunos[i].InformarNotas();
-                    Console.WriteLine ("A média do '" + nome_aluno + "' é: " + alunos[i].RetornarMedia());
+                    Console.WriteLine();
+
+                    //Console.WriteLine ("A média do '" + nome_aluno + "' é: " + alunos[i].RetornarMedia());
                 }
-                    catch(Exception ex) {
+                catch (Exception ex) {
                         Console.WriteLine("Nome ou notas inválidos. Revise os dados informados.");
                         i--;
                     }
+            }
+            foreach(Aluno aluno in alunos)
+            {
+                Console.WriteLine("A média do aluno '" + aluno.nome + "' é: " + aluno.RetornarMedia());
             }
             Console.ReadLine();
 
