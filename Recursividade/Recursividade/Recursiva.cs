@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recursividade
 {
-    internal class Recursiva
+    class Recursiva
     {
 
         public void Executar(string mensagem, int n)

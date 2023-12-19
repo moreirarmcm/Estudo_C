@@ -10,11 +10,22 @@ namespace Recursividade
     {
         static void Main(string[] args)
         {
+            /*Estudo 1
             Recursiva recursiva = new Recursiva();
             //recursiva.Executar("Olá mundo!", 5);
             recursiva.ExecutarRecursivo("Olá mundo!", 5);
             Console.ReadLine();
+            */
 
         }
+
+        static int Fatorial(int n)
+        {
+            if (n <= 0)
+            {
+                return 1;
+            }
+            return n * Fatorial(n - 1);
+         }
     }
 }
