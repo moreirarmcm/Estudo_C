@@ -14,7 +14,14 @@ namespace InterfaceForm
     {
         public Form1()
         {
+            Size tamanho = new Size();
+            tamanho.Width = 400;
+            tamanho.Height = 200;
+
             InitializeComponent();
+            this.Text = "Renan Moreira";
+            this.Size = tamanho;
+            
         }
     }
 }

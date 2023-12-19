@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\bin\Debug\InterfaceForm.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\bin\Debug\InterfaceForm.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\bin\Debug\InterfaceForm.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\InterfaceForm\InterfaceForm\obj\Debug\InterfaceForm.pdb
