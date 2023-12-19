@@ -10,6 +10,10 @@ namespace Recursividade
     {
         static void Main(string[] args)
         {
+            Recursiva recursiva = new Recursiva();
+            //recursiva.Executar("Olá mundo!", 5);
+            recursiva.ExecutarRecursivo("Olá mundo!", 5);
+            Console.ReadLine();
 
         }
     }
