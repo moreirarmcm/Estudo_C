@@ -23,5 +23,21 @@ namespace InterfaceForm
             this.Size = tamanho;
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Text = "Carregando o form";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Text = "Mudou";
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
