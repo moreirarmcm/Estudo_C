@@ -40,9 +40,9 @@
             this.btnEnviar = new System.Windows.Forms.Button();
             this.checkVeiculo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioMasc = new System.Windows.Forms.RadioButton();
-            this.radioFem = new System.Windows.Forms.RadioButton();
             this.radioOth = new System.Windows.Forms.RadioButton();
+            this.radioFem = new System.Windows.Forms.RadioButton();
+            this.radioMasc = new System.Windows.Forms.RadioButton();
             this.listLista = new System.Windows.Forms.ListBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
@@ -170,17 +170,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sexo";
             // 
-            // radioMasc
+            // radioOth
             // 
-            this.radioMasc.AutoSize = true;
-            this.radioMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioMasc.Location = new System.Drawing.Point(6, 24);
-            this.radioMasc.Name = "radioMasc";
-            this.radioMasc.Size = new System.Drawing.Size(89, 21);
-            this.radioMasc.TabIndex = 0;
-            this.radioMasc.TabStop = true;
-            this.radioMasc.Text = "Masculino";
-            this.radioMasc.UseVisualStyleBackColor = true;
+            this.radioOth.AutoSize = true;
+            this.radioOth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioOth.Location = new System.Drawing.Point(6, 70);
+            this.radioOth.Name = "radioOth";
+            this.radioOth.Size = new System.Drawing.Size(62, 21);
+            this.radioOth.TabIndex = 2;
+            this.radioOth.TabStop = true;
+            this.radioOth.Text = "Outro";
+            this.radioOth.UseVisualStyleBackColor = true;
             // 
             // radioFem
             // 
@@ -194,17 +194,17 @@
             this.radioFem.Text = "Feminino";
             this.radioFem.UseVisualStyleBackColor = true;
             // 
-            // radioOth
+            // radioMasc
             // 
-            this.radioOth.AutoSize = true;
-            this.radioOth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioOth.Location = new System.Drawing.Point(6, 70);
-            this.radioOth.Name = "radioOth";
-            this.radioOth.Size = new System.Drawing.Size(62, 21);
-            this.radioOth.TabIndex = 2;
-            this.radioOth.TabStop = true;
-            this.radioOth.Text = "Outro";
-            this.radioOth.UseVisualStyleBackColor = true;
+            this.radioMasc.AutoSize = true;
+            this.radioMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radioMasc.Location = new System.Drawing.Point(6, 24);
+            this.radioMasc.Name = "radioMasc";
+            this.radioMasc.Size = new System.Drawing.Size(89, 21);
+            this.radioMasc.TabIndex = 0;
+            this.radioMasc.TabStop = true;
+            this.radioMasc.Text = "Masculino";
+            this.radioMasc.UseVisualStyleBackColor = true;
             // 
             // listLista
             // 
@@ -271,6 +271,7 @@
             this.Controls.Add(this.label11);
             this.Name = "Form1";
             this.Text = "Cadastro de usuário";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
