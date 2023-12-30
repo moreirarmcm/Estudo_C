@@ -144,7 +144,7 @@
             this.btnEnviar.TabIndex = 9;
             this.btnEnviar.Text = "Cadastrar / Alterar";
             this.btnEnviar.UseVisualStyleBackColor = true;
-            this.btnEnviar.Click += new System.EventHandler(this.button1_Click);
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // checkVeiculo
             // 
@@ -178,7 +178,6 @@
             this.radioOth.Name = "radioOth";
             this.radioOth.Size = new System.Drawing.Size(62, 21);
             this.radioOth.TabIndex = 2;
-            this.radioOth.TabStop = true;
             this.radioOth.Text = "Outro";
             this.radioOth.UseVisualStyleBackColor = true;
             // 
@@ -190,13 +189,13 @@
             this.radioFem.Name = "radioFem";
             this.radioFem.Size = new System.Drawing.Size(83, 21);
             this.radioFem.TabIndex = 1;
-            this.radioFem.TabStop = true;
             this.radioFem.Text = "Feminino";
             this.radioFem.UseVisualStyleBackColor = true;
             // 
             // radioMasc
             // 
             this.radioMasc.AutoSize = true;
+            this.radioMasc.Checked = true;
             this.radioMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioMasc.Location = new System.Drawing.Point(6, 24);
             this.radioMasc.Name = "radioMasc";
