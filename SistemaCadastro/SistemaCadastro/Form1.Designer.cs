@@ -214,6 +214,7 @@
             this.listLista.Name = "listLista";
             this.listLista.Size = new System.Drawing.Size(537, 84);
             this.listLista.TabIndex = 12;
+            this.listLista.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listLista_MouseDoubleClick);
             // 
             // btnExcluir
             // 
