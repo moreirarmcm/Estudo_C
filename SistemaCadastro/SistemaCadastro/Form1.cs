@@ -35,10 +35,7 @@ namespace SistemaCadastro
                 }
             }
             
-            do
-            {
-                check_dados = ChecandoCampos();
-            } while (check_dados > 0);
+            check_dados = ChecandoCampos();
            
             char sexo;
             if (radioMasc.Checked)
@@ -83,7 +80,7 @@ namespace SistemaCadastro
                 MessageBox.Show("Preencha o campo nome.");
                 txtNome.Focus();
             }
-            if (txtTelefone.Text == "")
+            if (txtTelefone.Text == "(  )      -")
             {
                 checando++;
                 MessageBox.Show("Preencha o campo telefone.");
@@ -95,13 +92,23 @@ namespace SistemaCadastro
      
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtNome.Clear();
-            txtTelefone.Clear();
+            txtNome.Text = "";
+            txtData.Text = "";
+            comboEC.SelectedIndex = 0;
+            txtTelefone.Text = "";
+            checkCasa.Checked = false;
+            checkVeiculo.Checked = false;
+            radioMasc.Checked = true;
+            radioFem.Checked = false;
+            radioOth.Checked = false;
+            txtNome.Focus() ;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            int indice = listLista.SelectedIndex;
+            pessoas.RemoveAt(indice);
+            Listar();
         }
 
         private void Form1_Load(object sender, EventArgs e)
