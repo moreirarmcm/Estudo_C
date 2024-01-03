@@ -20,14 +20,17 @@ namespace ManipulandoStrings
         private void btn_executar_Click(object sender, EventArgs e)
         {
             string texto = "Este tipo de variável é alfanumérico.";
-            if (texto.Contains("tipo"))
-            {
-                lbl_string.Text = texto;
-            }
-            else
-            {
-                lbl_string.Text = "Não é alfanumérico";
-            }
+
+            /*   if (texto.Contains("tipo"))
+               {
+                   lbl_string.Text = texto;
+               }
+               else
+               {
+                   lbl_string.Text = "Não é alfanumérico";
+               }*/
+            int num = 5400;
+            lbl_string.Text = num.ToString();
         }
     }
 }
