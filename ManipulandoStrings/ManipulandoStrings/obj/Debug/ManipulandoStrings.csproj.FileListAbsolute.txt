@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\bin\Debug\ManipulandoStrings.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\bin\Debug\ManipulandoStrings.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\bin\Debug\ManipulandoStrings.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ManipulandoStrings\ManipulandoStrings\obj\Debug\ManipulandoStrings.pdb
