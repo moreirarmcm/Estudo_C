@@ -8,5 +8,18 @@ namespace LoteriaViciada
 {
     internal class Jogador
     {
+        private int codigo { get; }
+        public String nome { get; set; }
+        public int[] aposta { get; }
+
+        public Jogador(int _codigo, string _nome, int[] _aposta)
+        {
+            this.codigo = _codigo;
+            this.nome = _nome;
+            for (int i = 0; i < _aposta.Length; i++)
+            {
+                this.aposta[i] = _aposta[i];
+            }
+        }
     }
 }
