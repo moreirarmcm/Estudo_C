@@ -14,7 +14,7 @@ namespace LoteriaViciada
     {
 
         int[] escolha = new int[6];
-        string txt_escolha = "oS números escolhidos são: ";
+        string txt_escolha = "Os números escolhidos são: ";
         int id = 0;
        
         public Form1()
@@ -32,6 +32,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 1;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }        
         }
@@ -41,6 +42,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 2;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -50,6 +52,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 3;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -59,6 +62,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 4;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -68,6 +72,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 5;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -77,6 +82,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 6;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -86,6 +92,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 7;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -95,6 +102,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 8;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -104,6 +112,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 9;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
@@ -113,6 +122,7 @@ namespace LoteriaViciada
             {
                 escolha[id] = 10;
                 txt_escolha += escolha[id].ToString() + ", ";
+                lblAposta.Text = txt_escolha;
                 id++;
             }
         }
