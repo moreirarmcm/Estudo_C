@@ -38,12 +38,13 @@
             this.b8 = new System.Windows.Forms.Button();
             this.b9 = new System.Windows.Forms.Button();
             this.b10 = new System.Windows.Forms.Button();
+            this.btnJogar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b1
             // 
             this.b1.Location = new System.Drawing.Point(59, 129);
-            this.b1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.b1.Margin = new System.Windows.Forms.Padding(2);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(56, 19);
             this.b1.TabIndex = 0;
@@ -53,7 +54,7 @@
             // b2
             // 
             this.b2.Location = new System.Drawing.Point(138, 129);
-            this.b2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.b2.Margin = new System.Windows.Forms.Padding(2);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(56, 19);
             this.b2.TabIndex = 1;
@@ -63,7 +64,7 @@
             // b3
             // 
             this.b3.Location = new System.Drawing.Point(207, 129);
-            this.b3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.b3.Margin = new System.Windows.Forms.Padding(2);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(56, 19);
             this.b3.TabIndex = 2;
@@ -141,11 +142,21 @@
             this.b10.Text = "10";
             this.b10.UseVisualStyleBackColor = true;
             // 
+            // btnJogar
+            // 
+            this.btnJogar.Location = new System.Drawing.Point(138, 353);
+            this.btnJogar.Name = "btnJogar";
+            this.btnJogar.Size = new System.Drawing.Size(75, 23);
+            this.btnJogar.TabIndex = 10;
+            this.btnJogar.Text = "button1";
+            this.btnJogar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 474);
+            this.ClientSize = new System.Drawing.Size(396, 474);
+            this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.b10);
             this.Controls.Add(this.b9);
             this.Controls.Add(this.b8);
@@ -175,6 +186,7 @@
         private System.Windows.Forms.Button b8;
         private System.Windows.Forms.Button b9;
         private System.Windows.Forms.Button b10;
+        private System.Windows.Forms.Button btnJogar;
     }
 }
 
