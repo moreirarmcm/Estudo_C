@@ -39,6 +39,7 @@
             this.b9 = new System.Windows.Forms.Button();
             this.b10 = new System.Windows.Forms.Button();
             this.btnJogar = new System.Windows.Forms.Button();
+            this.lblAposta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b1
@@ -50,6 +51,7 @@
             this.b1.TabIndex = 0;
             this.b1.Text = "1";
             this.b1.UseVisualStyleBackColor = true;
+            this.b1.Click += new System.EventHandler(this.b1_Click);
             // 
             // b2
             // 
@@ -134,7 +136,7 @@
             // 
             // b10
             // 
-            this.b10.Location = new System.Drawing.Point(219, 240);
+            this.b10.Location = new System.Drawing.Point(207, 240);
             this.b10.Margin = new System.Windows.Forms.Padding(2);
             this.b10.Name = "b10";
             this.b10.Size = new System.Drawing.Size(56, 19);
@@ -144,18 +146,27 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.Location = new System.Drawing.Point(138, 353);
+            this.btnJogar.Location = new System.Drawing.Point(138, 346);
             this.btnJogar.Name = "btnJogar";
-            this.btnJogar.Size = new System.Drawing.Size(75, 23);
+            this.btnJogar.Size = new System.Drawing.Size(125, 23);
             this.btnJogar.TabIndex = 10;
-            this.btnJogar.Text = "button1";
+            this.btnJogar.Text = "Fazer aposta!";
             this.btnJogar.UseVisualStyleBackColor = true;
+            // 
+            // lblAposta
+            // 
+            this.lblAposta.AutoSize = true;
+            this.lblAposta.Location = new System.Drawing.Point(182, 298);
+            this.lblAposta.Name = "lblAposta";
+            this.lblAposta.Size = new System.Drawing.Size(0, 13);
+            this.lblAposta.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 474);
+            this.Controls.Add(this.lblAposta);
             this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.b10);
             this.Controls.Add(this.b9);
@@ -171,6 +182,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button b9;
         private System.Windows.Forms.Button b10;
         private System.Windows.Forms.Button btnJogar;
+        private System.Windows.Forms.Label lblAposta;
     }
 }
 
