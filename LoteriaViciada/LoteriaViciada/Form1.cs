@@ -16,7 +16,7 @@ namespace LoteriaViciada
         int[] escolha = new int[6];
         string txt_escolha = "Os números escolhidos são: ";
         int id = 0;
-       
+        Jogador jogador;
         public Form1()
         {
             InitializeComponent();
@@ -127,9 +127,16 @@ namespace LoteriaViciada
             }
         }
 
-        private void txtNome_TextChanged(object sender, EventArgs e)
+        private void btnJogar_Click(object sender, EventArgs e)
         {
-
+            if( txtNome.Equals(""))
+            {
+                lblAposta.Text = "Digite seu nome";
+            }
+            else
+            {
+                jogador = new Jogador(txtNome.Text, escolha);
+            }
         }
     }
 }
