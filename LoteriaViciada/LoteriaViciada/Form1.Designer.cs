@@ -40,14 +40,16 @@
             this.b10 = new System.Windows.Forms.Button();
             this.btnJogar = new System.Windows.Forms.Button();
             this.lblAposta = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b1
             // 
-            this.b1.Location = new System.Drawing.Point(79, 159);
-            this.b1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b1.Location = new System.Drawing.Point(59, 129);
+            this.b1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(75, 23);
+            this.b1.Size = new System.Drawing.Size(56, 19);
             this.b1.TabIndex = 0;
             this.b1.Text = "1";
             this.b1.UseVisualStyleBackColor = true;
@@ -55,10 +57,10 @@
             // 
             // b2
             // 
-            this.b2.Location = new System.Drawing.Point(184, 159);
-            this.b2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b2.Location = new System.Drawing.Point(138, 129);
+            this.b2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(75, 23);
+            this.b2.Size = new System.Drawing.Size(56, 19);
             this.b2.TabIndex = 1;
             this.b2.Text = "2";
             this.b2.UseVisualStyleBackColor = true;
@@ -66,10 +68,10 @@
             // 
             // b3
             // 
-            this.b3.Location = new System.Drawing.Point(276, 159);
-            this.b3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b3.Location = new System.Drawing.Point(207, 129);
+            this.b3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(75, 23);
+            this.b3.Size = new System.Drawing.Size(56, 19);
             this.b3.TabIndex = 2;
             this.b3.Text = "3";
             this.b3.UseVisualStyleBackColor = true;
@@ -77,10 +79,10 @@
             // 
             // b4
             // 
-            this.b4.Location = new System.Drawing.Point(388, 159);
-            this.b4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b4.Location = new System.Drawing.Point(291, 129);
+            this.b4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(75, 23);
+            this.b4.Size = new System.Drawing.Size(56, 19);
             this.b4.TabIndex = 3;
             this.b4.Text = "4";
             this.b4.UseVisualStyleBackColor = true;
@@ -88,10 +90,10 @@
             // 
             // b5
             // 
-            this.b5.Location = new System.Drawing.Point(79, 224);
-            this.b5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b5.Location = new System.Drawing.Point(59, 182);
+            this.b5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(75, 23);
+            this.b5.Size = new System.Drawing.Size(56, 19);
             this.b5.TabIndex = 4;
             this.b5.Text = "5";
             this.b5.UseVisualStyleBackColor = true;
@@ -99,10 +101,10 @@
             // 
             // b6
             // 
-            this.b6.Location = new System.Drawing.Point(184, 224);
-            this.b6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b6.Location = new System.Drawing.Point(138, 182);
+            this.b6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(75, 23);
+            this.b6.Size = new System.Drawing.Size(56, 19);
             this.b6.TabIndex = 5;
             this.b6.Text = "6";
             this.b6.UseVisualStyleBackColor = true;
@@ -110,10 +112,10 @@
             // 
             // b7
             // 
-            this.b7.Location = new System.Drawing.Point(276, 224);
-            this.b7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b7.Location = new System.Drawing.Point(207, 182);
+            this.b7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b7.Name = "b7";
-            this.b7.Size = new System.Drawing.Size(75, 23);
+            this.b7.Size = new System.Drawing.Size(56, 19);
             this.b7.TabIndex = 6;
             this.b7.Text = "7";
             this.b7.UseVisualStyleBackColor = true;
@@ -121,10 +123,10 @@
             // 
             // b8
             // 
-            this.b8.Location = new System.Drawing.Point(388, 224);
-            this.b8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b8.Location = new System.Drawing.Point(291, 182);
+            this.b8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b8.Name = "b8";
-            this.b8.Size = new System.Drawing.Size(75, 23);
+            this.b8.Size = new System.Drawing.Size(56, 19);
             this.b8.TabIndex = 7;
             this.b8.Text = "8";
             this.b8.UseVisualStyleBackColor = true;
@@ -132,10 +134,10 @@
             // 
             // b9
             // 
-            this.b9.Location = new System.Drawing.Point(184, 295);
-            this.b9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b9.Location = new System.Drawing.Point(138, 240);
+            this.b9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b9.Name = "b9";
-            this.b9.Size = new System.Drawing.Size(75, 23);
+            this.b9.Size = new System.Drawing.Size(56, 19);
             this.b9.TabIndex = 8;
             this.b9.Text = "9";
             this.b9.UseVisualStyleBackColor = true;
@@ -143,10 +145,10 @@
             // 
             // b10
             // 
-            this.b10.Location = new System.Drawing.Point(276, 295);
-            this.b10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.b10.Location = new System.Drawing.Point(207, 240);
+            this.b10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.b10.Name = "b10";
-            this.b10.Size = new System.Drawing.Size(75, 23);
+            this.b10.Size = new System.Drawing.Size(56, 19);
             this.b10.TabIndex = 9;
             this.b10.Text = "10";
             this.b10.UseVisualStyleBackColor = true;
@@ -154,10 +156,9 @@
             // 
             // btnJogar
             // 
-            this.btnJogar.Location = new System.Drawing.Point(184, 426);
-            this.btnJogar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnJogar.Location = new System.Drawing.Point(138, 392);
             this.btnJogar.Name = "btnJogar";
-            this.btnJogar.Size = new System.Drawing.Size(167, 28);
+            this.btnJogar.Size = new System.Drawing.Size(125, 23);
             this.btnJogar.TabIndex = 10;
             this.btnJogar.Text = "Fazer aposta!";
             this.btnJogar.UseVisualStyleBackColor = true;
@@ -165,18 +166,36 @@
             // lblAposta
             // 
             this.lblAposta.AutoSize = true;
-            this.lblAposta.Location = new System.Drawing.Point(48, 394);
-            this.lblAposta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAposta.Location = new System.Drawing.Point(36, 320);
             this.lblAposta.Name = "lblAposta";
-            this.lblAposta.Size = new System.Drawing.Size(48, 16);
+            this.lblAposta.Size = new System.Drawing.Size(39, 13);
             this.lblAposta.TabIndex = 11;
             this.lblAposta.Text = "Label1";
             // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(83, 347);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(264, 20);
+            this.txtNome.TabIndex = 12;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 350);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nome:";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 583);
+            this.ClientSize = new System.Drawing.Size(396, 474);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblAposta);
             this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.b10);
@@ -189,7 +208,6 @@
             this.Controls.Add(this.b3);
             this.Controls.Add(this.b2);
             this.Controls.Add(this.b1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -212,6 +230,8 @@
         private System.Windows.Forms.Button b10;
         private System.Windows.Forms.Button btnJogar;
         private System.Windows.Forms.Label lblAposta;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label1;
     }
 }
 
