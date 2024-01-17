@@ -27,10 +27,10 @@ namespace TrabalhandoStrings
             s = String.Format("O valor do produto é {0:C2} (em formato de moeda) e a temperatura é {1}", valor, temp);
             String h = String.Format("Hoje é {0:d} (isso é o dia atual) e são {0:t} ( isso é a hora)", DateTime.Now);
             h = String.Format("Hoje é {0:D} (outro formato) e são {0:T} (outro formato)", DateTime.Now);
+            String g = $"Hoje é {DateTime.Now:D} (outro formato) e são {DateTime.Now:T} (outro formato)";
 
 
-
-            lblTexto.Text = h;
+            lblTexto.Text = g;
         }
     }
 }
