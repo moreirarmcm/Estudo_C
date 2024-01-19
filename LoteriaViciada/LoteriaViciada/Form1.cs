@@ -136,6 +136,7 @@ namespace LoteriaViciada
             else
             {
                 jogador = new Jogador(txtNome.Text, escolha);
+                //
             }
         }
     }
