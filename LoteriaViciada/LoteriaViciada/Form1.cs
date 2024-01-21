@@ -88,7 +88,7 @@ namespace LoteriaViciada
         }
         private void b7_Click(object sender, EventArgs e)
         {
-            if (id <= 5)
+            if (id <= 4)
             {
                 escolha[id] = 7;
                 txt_escolha += escolha[id].ToString() + ", ";
