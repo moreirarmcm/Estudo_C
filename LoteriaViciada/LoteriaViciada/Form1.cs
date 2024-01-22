@@ -68,7 +68,7 @@ namespace LoteriaViciada
         }
         private void b5_Click(object sender, EventArgs e)
         {
-            if (id <= 5)
+            if (id <= 4)
             {
                 escolha[id] = 5;
                 txt_escolha += escolha[id].ToString() + ", ";
