@@ -28,13 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label_boasVindas = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label_boasVindas
+            // 
+            this.label_boasVindas.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_boasVindas.Location = new System.Drawing.Point(8, 128);
+            this.label_boasVindas.Name = "label_boasVindas";
+            this.label_boasVindas.Size = new System.Drawing.Size(709, 95);
+            this.label_boasVindas.TabIndex = 0;
+            this.label_boasVindas.Text = "Tela Inicial";
+            this.label_boasVindas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label_boasVindas.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(725, 350);
+            this.Controls.Add(this.label_boasVindas);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Início";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label_boasVindas;
     }
 }
 
