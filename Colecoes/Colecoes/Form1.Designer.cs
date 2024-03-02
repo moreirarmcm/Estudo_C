@@ -37,27 +37,31 @@
             this.Lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lista.FormattingEnabled = true;
             this.Lista.ItemHeight = 24;
-            this.Lista.Location = new System.Drawing.Point(12, 36);
+            this.Lista.Location = new System.Drawing.Point(16, 44);
+            this.Lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(634, 340);
+            this.Lista.Size = new System.Drawing.Size(844, 484);
             this.Lista.TabIndex = 0;
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(652, 36);
+            this.btnList.Location = new System.Drawing.Point(869, 44);
+            this.btnList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(136, 37);
+            this.btnList.Size = new System.Drawing.Size(181, 46);
             this.btnList.TabIndex = 1;
             this.btnList.Text = "List";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1060, 554);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.Lista);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listas genéricas";
