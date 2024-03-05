@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,11 +20,11 @@ namespace Colecoes
 
         private void btnList_Click(object sender, EventArgs e)
         {
-            List <String> lista = new List <String> ();
+            Lista.Items.Clear();
+            List<String> lista = new List <String> ();
             lista.Add("Renan");
             lista.Add("Rayane");
             lista.Add("Ruan");
-            Lista.Items.Clear ();
             lista.Sort ();
             Lista.Items.AddRange(lista.ToArray());
             Lista.Items.Add("A lista possui " + lista.Count.ToString() + " itens.");
@@ -32,6 +33,46 @@ namespace Colecoes
             {
                 MessageBox.Show("Há um Renan");
             }*/
+        }
+
+        private void btnHashset_Click(object sender, EventArgs e)
+        {
+            Lista.Items.Clear ();
+            HashSet<String> veiculos = new HashSet<String>() {"Carro","Avião","Helicóptero","Barco" };
+            Lista.Items.AddRange(veiculos.ToArray());
+
+        } 
+
+        private void btnDictionary_Click(object sender, EventArgs e)
+        {
+            Lista.Items.Clear();
+            Dictionary<int, String> alunos = new Dictionary<int, String>()
+            {
+                {1,"Renan"},
+                {2,"Rayane"},
+                {3, "Ruan"}
+            };
+            alunos.Add(4, "Ramon");
+            foreach(KeyValuePair <int,String> aluno in alunos)
+            {
+                //Lista.Items.Add(aluno);
+                Lista.Items.Add(aluno.Value);
+            }   
+        
+        }
+
+        private void btnSorted_Click(object sender, EventArgs e)
+        {
+            SortedList<int, string> lista_ordenada = new SortedList<int, string>()
+            {
+                {1,"Renan"},
+                {2,"Rayane"},
+                {3, "Ruan"}
+            };
+            foreach(KeyValuePair<int,string> lista in lista_ordenada)
+            {
+                Lista.Items.Add (lista.Value);
+            }
         }
     }
 }
