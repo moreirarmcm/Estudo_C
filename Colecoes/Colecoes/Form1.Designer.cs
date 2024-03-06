@@ -33,6 +33,7 @@
             this.btnHashset = new System.Windows.Forms.Button();
             this.btnDictionary = new System.Windows.Forms.Button();
             this.btnSorted = new System.Windows.Forms.Button();
+            this.btnSortedSet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lista
@@ -90,11 +91,23 @@
             this.btnSorted.UseVisualStyleBackColor = true;
             this.btnSorted.Click += new System.EventHandler(this.btnSorted_Click);
             // 
+            // btnSortedSet
+            // 
+            this.btnSortedSet.Location = new System.Drawing.Point(869, 316);
+            this.btnSortedSet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSortedSet.Name = "btnSortedSet";
+            this.btnSortedSet.Size = new System.Drawing.Size(181, 46);
+            this.btnSortedSet.TabIndex = 5;
+            this.btnSortedSet.Text = "Sorted Set";
+            this.btnSortedSet.UseVisualStyleBackColor = true;
+            this.btnSortedSet.Click += new System.EventHandler(this.btnSortedSet_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 554);
+            this.Controls.Add(this.btnSortedSet);
             this.Controls.Add(this.btnSorted);
             this.Controls.Add(this.btnDictionary);
             this.Controls.Add(this.btnHashset);
@@ -115,6 +128,7 @@
         private System.Windows.Forms.Button btnHashset;
         private System.Windows.Forms.Button btnDictionary;
         private System.Windows.Forms.Button btnSorted;
+        private System.Windows.Forms.Button btnSortedSet;
     }
 }
 
