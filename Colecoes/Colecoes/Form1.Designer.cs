@@ -41,18 +41,16 @@
             this.Lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lista.FormattingEnabled = true;
             this.Lista.ItemHeight = 24;
-            this.Lista.Location = new System.Drawing.Point(16, 44);
-            this.Lista.Margin = new System.Windows.Forms.Padding(4);
+            this.Lista.Location = new System.Drawing.Point(12, 36);
             this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(844, 484);
+            this.Lista.Size = new System.Drawing.Size(634, 388);
             this.Lista.TabIndex = 0;
             // 
             // btnList
             // 
-            this.btnList.Location = new System.Drawing.Point(869, 44);
-            this.btnList.Margin = new System.Windows.Forms.Padding(4);
+            this.btnList.Location = new System.Drawing.Point(652, 36);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(181, 46);
+            this.btnList.Size = new System.Drawing.Size(136, 37);
             this.btnList.TabIndex = 1;
             this.btnList.Text = "List";
             this.btnList.UseVisualStyleBackColor = true;
@@ -60,10 +58,9 @@
             // 
             // btnHashset
             // 
-            this.btnHashset.Location = new System.Drawing.Point(869, 111);
-            this.btnHashset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHashset.Location = new System.Drawing.Point(652, 90);
             this.btnHashset.Name = "btnHashset";
-            this.btnHashset.Size = new System.Drawing.Size(181, 46);
+            this.btnHashset.Size = new System.Drawing.Size(136, 37);
             this.btnHashset.TabIndex = 2;
             this.btnHashset.Text = "HashSet";
             this.btnHashset.UseVisualStyleBackColor = true;
@@ -71,10 +68,9 @@
             // 
             // btnDictionary
             // 
-            this.btnDictionary.Location = new System.Drawing.Point(869, 175);
-            this.btnDictionary.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDictionary.Location = new System.Drawing.Point(652, 142);
             this.btnDictionary.Name = "btnDictionary";
-            this.btnDictionary.Size = new System.Drawing.Size(181, 46);
+            this.btnDictionary.Size = new System.Drawing.Size(136, 37);
             this.btnDictionary.TabIndex = 3;
             this.btnDictionary.Text = "Dictionary";
             this.btnDictionary.UseVisualStyleBackColor = true;
@@ -82,10 +78,9 @@
             // 
             // btnSorted
             // 
-            this.btnSorted.Location = new System.Drawing.Point(868, 243);
-            this.btnSorted.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSorted.Location = new System.Drawing.Point(651, 197);
             this.btnSorted.Name = "btnSorted";
-            this.btnSorted.Size = new System.Drawing.Size(181, 46);
+            this.btnSorted.Size = new System.Drawing.Size(136, 37);
             this.btnSorted.TabIndex = 4;
             this.btnSorted.Text = "Sorted List";
             this.btnSorted.UseVisualStyleBackColor = true;
@@ -93,10 +88,9 @@
             // 
             // btnSortedSet
             // 
-            this.btnSortedSet.Location = new System.Drawing.Point(869, 316);
-            this.btnSortedSet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSortedSet.Location = new System.Drawing.Point(652, 250);
             this.btnSortedSet.Name = "btnSortedSet";
-            this.btnSortedSet.Size = new System.Drawing.Size(181, 46);
+            this.btnSortedSet.Size = new System.Drawing.Size(136, 37);
             this.btnSortedSet.TabIndex = 5;
             this.btnSortedSet.Text = "Sorted Set";
             this.btnSortedSet.UseVisualStyleBackColor = true;
@@ -104,16 +98,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 554);
+            this.ClientSize = new System.Drawing.Size(795, 450);
             this.Controls.Add(this.btnSortedSet);
             this.Controls.Add(this.btnSorted);
             this.Controls.Add(this.btnDictionary);
             this.Controls.Add(this.btnHashset);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.Lista);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listas genéricas";
