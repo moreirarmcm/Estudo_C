@@ -12,6 +12,7 @@ namespace JoKenPo
 {
     public partial class Form1 : Form
     {
+        Jogo jogo = new Jogo();
         public Form1()
         {
             InitializeComponent();
