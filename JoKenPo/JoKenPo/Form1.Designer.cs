@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picVoce = new System.Windows.Forms.PictureBox();
+            this.picMaquina = new System.Windows.Forms.PictureBox();
             this.picResultado = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btnPedra = new System.Windows.Forms.Button();
+            this.btnPapel = new System.Windows.Forms.Button();
+            this.btnTesoura = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaquina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResultado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,21 +56,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Escolha: Pedra, Papel ou Tesoura...";
             // 
-            // pictureBox1
+            // picVoce
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(28, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picVoce.Location = new System.Drawing.Point(28, 141);
+            this.picVoce.Name = "picVoce";
+            this.picVoce.Size = new System.Drawing.Size(200, 200);
+            this.picVoce.TabIndex = 1;
+            this.picVoce.TabStop = false;
             // 
-            // pictureBox2
+            // picMaquina
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(294, 141);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.picMaquina.Location = new System.Drawing.Point(294, 141);
+            this.picMaquina.Name = "picMaquina";
+            this.picMaquina.Size = new System.Drawing.Size(200, 200);
+            this.picMaquina.TabIndex = 2;
+            this.picMaquina.TabStop = false;
             // 
             // picResultado
             // 
@@ -127,57 +127,60 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "=";
             // 
-            // button1
+            // btnPedra
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Image = global::JoKenPo.Properties.Resources.Pedra;
-            this.button1.Location = new System.Drawing.Point(28, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 151);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPedra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPedra.Image = global::JoKenPo.Properties.Resources.Pedra;
+            this.btnPedra.Location = new System.Drawing.Point(28, 369);
+            this.btnPedra.Name = "btnPedra";
+            this.btnPedra.Size = new System.Drawing.Size(200, 151);
+            this.btnPedra.TabIndex = 9;
+            this.btnPedra.UseVisualStyleBackColor = true;
+            this.btnPedra.Click += new System.EventHandler(this.btnPedra_Click);
             // 
-            // button2
+            // btnPapel
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Image = global::JoKenPo.Properties.Resources.Papel;
-            this.button2.Location = new System.Drawing.Point(288, 369);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 145);
-            this.button2.TabIndex = 10;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPapel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPapel.Image = global::JoKenPo.Properties.Resources.Papel;
+            this.btnPapel.Location = new System.Drawing.Point(288, 369);
+            this.btnPapel.Name = "btnPapel";
+            this.btnPapel.Size = new System.Drawing.Size(205, 145);
+            this.btnPapel.TabIndex = 10;
+            this.btnPapel.UseVisualStyleBackColor = true;
+            this.btnPapel.Click += new System.EventHandler(this.btnPapel_Click);
             // 
-            // button3
+            // btnTesoura
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Image = global::JoKenPo.Properties.Resources.Tesoura;
-            this.button3.Location = new System.Drawing.Point(578, 372);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 144);
-            this.button3.TabIndex = 11;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTesoura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTesoura.Image = global::JoKenPo.Properties.Resources.Tesoura;
+            this.btnTesoura.Location = new System.Drawing.Point(578, 372);
+            this.btnTesoura.Name = "btnTesoura";
+            this.btnTesoura.Size = new System.Drawing.Size(200, 144);
+            this.btnTesoura.TabIndex = 11;
+            this.btnTesoura.UseVisualStyleBackColor = true;
+            this.btnTesoura.Click += new System.EventHandler(this.btnTesoura_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 541);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTesoura);
+            this.Controls.Add(this.btnPapel);
+            this.Controls.Add(this.btnPedra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.picResultado);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picMaquina);
+            this.Controls.Add(this.picVoce);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "JoKenPo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaquina)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picResultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,17 +190,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picVoce;
+        private System.Windows.Forms.PictureBox picMaquina;
         private System.Windows.Forms.PictureBox picResultado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPedra;
+        private System.Windows.Forms.Button btnPapel;
+        private System.Windows.Forms.Button btnTesoura;
     }
 }
 
