@@ -1,0 +1,7 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\obj\Debug\Threads.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\obj\Debug\Threads.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\bin\Debug\Threads.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\bin\Debug\Threads.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\bin\Debug\Threads.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\obj\Debug\Threads.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\Threads\Threads\obj\Debug\Threads.pdb
