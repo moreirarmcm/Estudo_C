@@ -11,13 +11,15 @@ namespace Threads
     {
         static void Main(string[] args)
         {
-            Thread t = new Thread(new ThreadStart(Tarefa)); 
+            Thread t = new Thread(new ThreadStart(Tarefa));
             t.Start();
+            //t.IsBackground = true; //Thread encessa com o final da thread principal
+            //t.Join(); // Bloqueia execução da thread principal
 
             for (int i = 0; i < 10; i++) {
                 Console.WriteLine("Principal");
                 Dormir();
-
+ 
             }
             Console.ReadKey();
            
