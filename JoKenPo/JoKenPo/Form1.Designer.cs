@@ -34,7 +34,7 @@
             this.picResultado = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnPedra = new System.Windows.Forms.Button();
@@ -100,14 +100,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Máquina";
             // 
-            // label4
+            // lblResultado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(650, 239);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "?";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(650, 239);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(13, 13);
+            this.lblResultado.TabIndex = 6;
+            this.lblResultado.Text = "?";
             // 
             // label5
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.btnPedra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.picResultado);
@@ -195,7 +195,7 @@
         private System.Windows.Forms.PictureBox picResultado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnPedra;

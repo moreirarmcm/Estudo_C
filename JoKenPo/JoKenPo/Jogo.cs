@@ -13,24 +13,24 @@ namespace JoKenPo
 
         public static Image[] imagens =
         {
-            Image.FromFile("Resources/Pedra.png"),
-            Image.FromFile("Resources/Papel.png"),
-            Image.FromFile("Resources/Tesoura.png"),
-            Image.FromFile("Resources/Empatar.png"),
-            Image.FromFile("Resources/Ganhar.png"),
-            Image.FromFile("Resources/Perder.png")
+            Image.FromFile("Pedra.png"),
+            Image.FromFile("Papel.png"),
+            Image.FromFile("Tesoura.png"),
+            Image.FromFile("Empatar.png"),
+            Image.FromFile("Ganhar.png"),
+            Image.FromFile("Perder.png")
         };
 
         public Image img_maquina { get; private set; }
         public Image img_jogador {  get; private set; }
 
-        public resultado jogar(int jogador)
+        public resultado Jogar (int jogador)
         {
             int pc = JogadaPC();
             img_jogador = imagens[jogador];
             img_maquina = imagens[pc];
 
-            if (img_jogador == img_maquina)
+            if (jogador == pc)
             {
                 return resultado.Empatar;
             }
