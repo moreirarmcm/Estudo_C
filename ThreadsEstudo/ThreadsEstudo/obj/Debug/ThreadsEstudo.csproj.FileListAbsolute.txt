@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\bin\Debug\ThreadsEstudo.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\bin\Debug\ThreadsEstudo.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\bin\Debug\ThreadsEstudo.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ThreadsEstudo\ThreadsEstudo\obj\Debug\ThreadsEstudo.pdb

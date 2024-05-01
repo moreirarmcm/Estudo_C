@@ -1,0 +1,7 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\bin\Debug\TaskConsole.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\bin\Debug\TaskConsole.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\bin\Debug\TaskConsole.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\obj\Debug\TaskConsole.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\obj\Debug\TaskConsole.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\obj\Debug\TaskConsole.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\TaskConsole\TaskConsole\obj\Debug\TaskConsole.pdb
