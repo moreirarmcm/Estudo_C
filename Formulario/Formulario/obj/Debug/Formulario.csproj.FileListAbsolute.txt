@@ -1,0 +1,11 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\bin\Debug\Formulario.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\bin\Debug\Formulario.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\bin\Debug\Formulario.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.FormMain.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\Formulario\Formulario\obj\Debug\Formulario.FormSegunda.resources
