@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\bin\Debug\ArquivosPastas.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\bin\Debug\ArquivosPastas.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\bin\Debug\ArquivosPastas.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\ArquivosPastas\obj\Debug\ArquivosPastas.pdb
