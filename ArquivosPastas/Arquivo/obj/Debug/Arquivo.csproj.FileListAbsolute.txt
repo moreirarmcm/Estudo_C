@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\bin\Debug\Arquivo.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\bin\Debug\Arquivo.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\bin\Debug\Arquivo.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Arquivo\obj\Debug\Arquivo.pdb
