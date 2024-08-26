@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseDados\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB07AFBB-5332-4452-8C9C-4A51A17EA5BD}|BaseDados\\BaseDados.csproj|c:\\users\\morei\\documents\\github\\estudo_c\\basedados\\basedados\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB07AFBB-5332-4452-8C9C-4A51A17EA5BD}|BaseDados\\BaseDados.csproj|solutionrelative:basedados\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB07AFBB-5332-4452-8C9C-4A51A17EA5BD}|BaseDados\\BaseDados.csproj|c:\\users\\morei\\documents\\github\\estudo_c\\basedados\\basedados\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EB07AFBB-5332-4452-8C9C-4A51A17EA5BD}|BaseDados\\BaseDados.csproj|solutionrelative:basedados\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseDados\\BaseDados\\Form1.cs",
+              "RelativeDocumentMoniker": "BaseDados\\Form1.cs",
+              "ToolTip": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseDados\\BaseDados\\Form1.cs",
+              "RelativeToolTip": "BaseDados\\Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T13:40:16.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseDados\\BaseDados\\Form1.cs",
               "RelativeDocumentMoniker": "BaseDados\\Form1.cs",
@@ -27,10 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T11:59:37.265Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
