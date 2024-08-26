@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\bin\Debug\Diretorio.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\bin\Debug\Diretorio.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\bin\Debug\Diretorio.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\ArquivosPastas\Diretorio\obj\Debug\Diretorio.pdb

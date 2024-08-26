@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C0CF2C0-1801-45EF-BBDB-29307B4FF28B}|Directory\\Directory.csproj|c:\\users\\morei\\documents\\github\\estudo_c\\arquivospastas\\directory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6C0CF2C0-1801-45EF-BBDB-29307B4FF28B}|Directory\\Directory.csproj|solutionrelative:directory\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{40744FF7-6FC6-4449-8C29-F1BBFE6D00E8}|Diretorio\\Diretorio.csproj|c:\\users\\morei\\documents\\github\\estudo_c\\arquivospastas\\diretorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40744FF7-6FC6-4449-8C29-F1BBFE6D00E8}|Diretorio\\Diretorio.csproj|solutionrelative:diretorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40744FF7-6FC6-4449-8C29-F1BBFE6D00E8}|Diretorio\\Diretorio.csproj|C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\diretorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40744FF7-6FC6-4449-8C29-F1BBFE6D00E8}|Diretorio\\Diretorio.csproj|solutionrelative:diretorio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD8A370F-9C15-48CA-8E50-6AFD330ACFF6}|Arquivo\\Arquivo.csproj|C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\arquivo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,35 +34,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Diretorio\\Form1.cs",
+              "RelativeDocumentMoniker": "Diretorio\\Form1.cs",
+              "ToolTip": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Diretorio\\Form1.cs",
+              "RelativeToolTip": "Diretorio\\Form1.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwB8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T18:33:33.132Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Directory\\Form1.cs",
-              "RelativeDocumentMoniker": "Directory\\Form1.cs",
-              "ToolTip": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Directory\\Form1.cs [Design]",
-              "RelativeToolTip": "Directory\\Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Diretorio\\Form1.cs",
+              "RelativeDocumentMoniker": "Diretorio\\Form1.cs",
+              "ToolTip": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Diretorio\\Form1.cs [Design]",
+              "RelativeToolTip": "Diretorio\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T02:36:05.03Z",
+              "WhenOpened": "2024-07-09T18:31:12.602Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Arquivo\\Form1.cs",
               "RelativeDocumentMoniker": "Arquivo\\Form1.cs",
               "ToolTip": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Arquivo\\Form1.cs",
               "RelativeToolTip": "Arquivo\\Form1.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBkAAAArAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T22:39:32.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Arquivo\\Form1.cs",
               "RelativeDocumentMoniker": "Arquivo\\Form1.cs",
@@ -69,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form1.resx",
               "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Arquivo\\Form1.resx",
               "RelativeDocumentMoniker": "Arquivo\\Form1.resx",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\ArquivosPastas\\Arquivo\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Arquivo\\Form1.Designer.cs",
