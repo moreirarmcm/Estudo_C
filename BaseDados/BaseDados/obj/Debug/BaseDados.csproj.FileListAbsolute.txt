@@ -11,3 +11,9 @@ C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\obj\Debug\BaseDados
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\obj\Debug\BaseDados.csproj.Up2Date
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\obj\Debug\BaseDados.exe
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\obj\Debug\BaseDados.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\MySql.Data.dll
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\System.Memory.dll
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\System.Buffers.dll
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseDados\BaseDados\bin\Debug\MySql.Data.xml
