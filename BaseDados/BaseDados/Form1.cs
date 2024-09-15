@@ -225,24 +225,13 @@ namespace BaseDados
 
             try
             {
-                string query = "delete from Pessoas";
-                if (!txtNome.Text.Equals("") || !txtEmail.Text.Equals(""))
-                {
-                    string nome = txtNome.Text;
-                    string email = txtEmail.Text;
-                    query += " where nome like '" + nome + "' OR email like '" + Email + "'";
-                }
-
-                DataTable dados = new DataTable();
-                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, connection);
                 connection.Open();
-                adaptador.Fill(dados);
+                SQLiteCommand command = new SQLiteCommand(conexao);
+                string nome = txtNome.Text;
+                string email = txtEmail.Text;
+                command.CommandText = "delete from Pessoas where nome like '" + nome + "' OR email like '" + Email +"'";
                 lblResultado.Text = "Dados deletados.";
 
-                /* foreach (DataRow dr in dados.Rows)
-                 {
-                     Lista.Rows.Add(dr.ItemArray);
-                 }*/
             }
             catch (Exception ex)
             {
@@ -259,6 +248,44 @@ namespace BaseDados
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
+            String baseDados = Application.StartupPath + @"\DBSQLite.db";
+            String conexao = @"DataSource = " + baseDados + "; version = 3";
+            SQLiteConnection connection = new SQLiteConnection(conexao);
+
+            //#region Excluir Dados SQLite
+            lblResultado.Text = "";
+            //Lista.Rows.Clear();
+
+            try
+            {
+                connection.Open();
+                SQLiteCommand command = new SQLiteCommand();
+                command.Connection = connection;
+
+                int id = (int)Lista.SelectedRows[0].Cells[0].Value;
+                string nome = txtNome.Text;
+                string email = txtEmail.Text;
+               
+                string query = "update Pessoas set nome = '"+ nome + "', email = '" + email + "' where id = " + id;
+                command.CommandText = query;
+
+                command.ExecuteNonQuery();
+
+                lblResultado.Text = "Dados atualizados.";
+                command.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+
+                lblResultado.Text += "Erro.";
+                Lista.Rows.Clear();
+            }
+            finally
+            {
+                connection.Close();
+            }
 
         }
     }
