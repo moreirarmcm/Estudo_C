@@ -16,69 +16,65 @@ namespace BaseDados
 {
     public partial class Form1 : Form
     {
+        string nomeBase, acessoBase;
+        private SQLiteConnection conexao = null;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnConectar_Click(object sender, EventArgs e)
+        public void EstabelecendoConexao()
         {
-            #region SQL Server CE
+            nomeBase = Application.StartupPath + "\\DBSQlite.db";
+            acessoBase = @"Data Source = " + nomeBase + "; Version = 3";
 
-            String baseDados = Application.StartupPath + @"\DBSQLServer.sdf";
-            String conexao = @"DataSource = " + baseDados + "; Password = '1234'";
-            SqlCeEngine db = new SqlCeEngine(conexao);
-
-            if (!File.Exists(baseDados))
+            if (!File.Exists(nomeBase))
             {
-                db.CreateDatabase();
+                SQLiteConnection.CreateFile(nomeBase);
             }
-            db.Dispose();
-            SqlCeConnection conexaoConnection = new SqlCeConnection(conexao);
+             conexao = new SQLiteConnection(acessoBase);
             try
             {
-                conexaoConnection.Open();
-                lblResultado.Text = "Conectado!";
+                conexao.Open();
+                lblResultado.Text = "Conectado à base de dados " + nomeBase;
             }
             catch (Exception ex)
             {
-                lblResultado.Text = "Erro ao conectar à base";
+                lblResultado.Text = "Erro ao conectar à base de dados " + nomeBase + "\n" + ex.Message;
             }
-            finally
-            {
-                conexaoConnection.Close();
-
-            }
-            #endregion
-
-            #region SQLite
-            /*
-              string baseDados = Application.StartupPath + @"\DBSQLite.db";
-              string strConection = @"Data Source = " + baseDados + "; Version = 3";
-
-              if (!File.Exists(baseDados))
-              {
-                  SQLiteConnection.CreateFile(baseDados);
-              }
-              SQLiteConnection connection = new SQLiteConnection(strConection);
-              try
-              {
-                  connection.Open();
-                  lblResultado.Text = "Conectado.";
-              }
-              catch (Exception ee)
-              {
-                  lblResultado.Text = "Não conectado.";
-              }
-              finally
-              {
-                  connection.Close();
-              }
-
-              */
-            #endregion
-
         }
+
+        public void EncerrandoConexao(SQLiteConnection conexao)
+        {
+            conexao.Close();  
+        }
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+
+            //string baseDados = Application.StartupPath + @"\DBSQLite.db";
+            //string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            // if (!File.Exists(baseDados))
+            // {
+            //     SQLiteConnection.CreateFile(baseDados);
+            // }
+            // SQLiteConnection connection = new SQLiteConnection(strConection);
+            // try
+            // {
+            //     connection.Open();
+            //     lblResultado.Text = "Conectado.";
+            // }
+            // catch (Exception ee)
+            // {
+            //     lblResultado.Text = "Não conectado.";
+            // }
+            // finally
+            // {
+            //     connection.Close();
+            // }
+            EstabelecendoConexao();
+            EncerrandoConexao(conexao);
+       }
 
         private void button2_Click(object sender, EventArgs e)
         {
