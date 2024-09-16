@@ -37,12 +37,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnConectar = new System.Windows.Forms.Button();
-            this.btnCriarTabela = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCriar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Lista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +103,7 @@
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(99, 147);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(651, 35);
+            this.txtNome.Size = new System.Drawing.Size(651, 41);
             this.txtNome.TabIndex = 4;
             // 
             // txtEmail
@@ -112,7 +111,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(99, 203);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(651, 35);
+            this.txtEmail.Size = new System.Drawing.Size(651, 41);
             this.txtEmail.TabIndex = 6;
             // 
             // label2
@@ -124,32 +123,10 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Email";
             // 
-            // btnConectar
-            // 
-            this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConectar.Location = new System.Drawing.Point(775, 147);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(129, 33);
-            this.btnConectar.TabIndex = 7;
-            this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = true;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // btnCriarTabela
-            // 
-            this.btnCriarTabela.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarTabela.Location = new System.Drawing.Point(775, 206);
-            this.btnCriarTabela.Name = "btnCriarTabela";
-            this.btnCriarTabela.Size = new System.Drawing.Size(129, 33);
-            this.btnCriarTabela.TabIndex = 8;
-            this.btnCriarTabela.Text = "Criar tabela";
-            this.btnCriarTabela.UseVisualStyleBackColor = true;
-            this.btnCriarTabela.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(775, 265);
+            this.btnInserir.Location = new System.Drawing.Point(775, 220);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(129, 33);
             this.btnInserir.TabIndex = 9;
@@ -160,7 +137,7 @@
             // btnProcurar
             // 
             this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurar.Location = new System.Drawing.Point(775, 324);
+            this.btnProcurar.Location = new System.Drawing.Point(775, 293);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(129, 33);
             this.btnProcurar.TabIndex = 10;
@@ -171,7 +148,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(775, 383);
+            this.btnExcluir.Location = new System.Drawing.Point(775, 366);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(129, 33);
             this.btnExcluir.TabIndex = 11;
@@ -182,7 +159,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(775, 442);
+            this.btnEditar.Location = new System.Drawing.Point(775, 439);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(129, 33);
             this.btnEditar.TabIndex = 12;
@@ -190,17 +167,27 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnCriar
+            // 
+            this.btnCriar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriar.Location = new System.Drawing.Point(775, 147);
+            this.btnCriar.Name = "btnCriar";
+            this.btnCriar.Size = new System.Drawing.Size(129, 33);
+            this.btnCriar.TabIndex = 13;
+            this.btnCriar.Text = "Criar tabela";
+            this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 504);
+            this.Controls.Add(this.btnCriar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.btnInserir);
-            this.Controls.Add(this.btnCriarTabela);
-            this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
@@ -226,12 +213,11 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnConectar;
-        private System.Windows.Forms.Button btnCriarTabela;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCriar;
     }
 }
 

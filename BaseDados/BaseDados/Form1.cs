@@ -46,79 +46,21 @@ namespace BaseDados
 
         public void EncerrandoConexao(SQLiteConnection conexao)
         {
-            conexao.Close();  
+            if (conexao != null)
+            {
+                conexao.Close();
+            }
         }
-        private void btnConectar_Click(object sender, EventArgs e)
+
+        private void btnCriar_Click(object sender, EventArgs e)
         {
-
-            //string baseDados = Application.StartupPath + @"\DBSQLite.db";
-            //string strConection = @"Data Source = " + baseDados + "; Version = 3";
-
-            // if (!File.Exists(baseDados))
-            // {
-            //     SQLiteConnection.CreateFile(baseDados);
-            // }
-            // SQLiteConnection connection = new SQLiteConnection(strConection);
-            // try
-            // {
-            //     connection.Open();
-            //     lblResultado.Text = "Conectado.";
-            // }
-            // catch (Exception ee)
-            // {
-            //     lblResultado.Text = "Não conectado.";
-            // }
-            // finally
-            // {
-            //     connection.Close();
-            // }
-            EstabelecendoConexao();
-            EncerrandoConexao(conexao);
-       }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            #region Criar tabela (Pessoas) SQL Server CE
-            /*
-             String baseDados = Application.StartupPath + @"\DBSQLServer.sdf";
-            String conexao = @"DataSource = " + baseDados + "; Password = '1234'";
-            SqlCeConnection connection = new SqlCeConnection(conexao);
-
             try
             {
-                connection.Open();
-                SqlCeCommand comando = new SqlCeCommand();
-                comando.Connection = connection;
-                comando.CommandText = "CREATE TABLE Pessoas (id int not null primary key, nome nvarchar(50),email nvarchar(50))";
-                comando.ExecuteNonQuery();
-
-                lblResultado.Text = "Tabela Criada (SQL Server CE).";
-            }
-            catch (Exception ex)
-            {
-                lblResultado.Text = ex.Message;
-            }
-            finally { 
-                connection.Close();
-            }
-            */
-            #endregion
-
-
-            #region Criar tabela (Pessoas) SQLite
-
-            String baseDados = Application.StartupPath + @"\DBSQLite.db";
-            String conexao = @"DataSource = " + baseDados + "; version = 3";
-            SQLiteConnection connection = new SQLiteConnection(conexao);
-
-            try
-            {
-                connection.Open();
-                SQLiteCommand comando = new SQLiteCommand();
-                comando.Connection = connection;
-                comando.CommandText = "CREATE TABLE Pessoas (id int not null primary key, nome nvarchar(50),email nvarchar(50))";
-                comando.ExecuteNonQuery();
-
+                EstabelecendoConexao();
+                SQLiteCommand criarTabela = new SQLiteCommand();
+                criarTabela.Connection = this.conexao;
+                criarTabela.CommandText = "CREATE TABLE Pessoas (id int not null primary key, nome nvarchar(50),email nvarchar(50))";
+                criarTabela.ExecuteNonQuery();
                 lblResultado.Text = "Tabela Criada (SQLite).";
             }
             catch (Exception ex)
@@ -127,33 +69,42 @@ namespace BaseDados
             }
             finally
             {
-                connection.Close();
+                EncerrandoConexao(conexao);
             }
-
-            #endregion
-
-
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            String baseDados = Application.StartupPath + @"\DBSQLite.db";
-            String conexao = @"DataSource = " + baseDados + "; version = 3";
-            SQLiteConnection connection = new SQLiteConnection(conexao);
-
             try
             {
-                connection.Open();
-                SQLiteCommand comando = new SQLiteCommand();
-                comando.Connection = connection;
+                EstabelecendoConexao();
+                SQLiteCommand insertDados = new SQLiteCommand(conexao);
+                //insertDados.Connection = conexao;
                 int id = new Random(DateTime.Now.Millisecond).Next(0, 1000);
                 string nome = txtNome.Text;
                 string email = txtEmail.Text;
-                comando.CommandText = "INSERT INTO Pessoas VALUES (" + id + ",'" + nome + "','" + email + "')";
-                comando.ExecuteNonQuery();
+                if (!nome.Equals("") && nome != null)
+                {
+                    if (!email.Equals("") && email != null)
+                    {
+                        insertDados.CommandText = "INSERT INTO Pessoas VALUES (" + id + ",'" + nome + "','" + email + "')";
+                        insertDados.ExecuteNonQuery();
 
-                lblResultado.Text = "Registro inserido (SQLite).";
-                comando.Dispose();
+                        lblResultado.Text = "Registro inserido (SQLite).";
+                        insertDados.Dispose();
+                    }
+                    else
+                    {
+                        lblResultado.Text = "O email deve ser informado.";
+                        EncerrandoConexao(conexao);
+                    }
+                }
+                else
+                {
+                    lblResultado.Text = "O nome deve ser informado.";
+                    EncerrandoConexao(conexao);
+                }
+                
             }
             catch (Exception ex)
             {
@@ -161,22 +112,20 @@ namespace BaseDados
             }
             finally
             {
-                connection.Close();
+                EncerrandoConexao(conexao);
             }
         }
 
+
         private void btnProcurar_Click(object sender, EventArgs e)
         {
-            String baseDados = Application.StartupPath + @"\DBSQLite.db";
-            String conexao = @"DataSource = " + baseDados + "; version = 3";
-            SQLiteConnection connection = new SQLiteConnection(conexao);
-
-            #region Procurar Dados SQLite
+            
             lblResultado.Text = "";
             Lista.Rows.Clear();
 
             try
             {
+                EstabelecendoConexao();
                 string query = "select * from pessoas";
                 if (!txtNome.Text.Equals("") || !txtEmail.Text.Equals(""))
                 {
@@ -186,8 +135,7 @@ namespace BaseDados
                 }
 
                 DataTable dados = new DataTable();
-                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, connection);
-                connection.Open();
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, conexao);
                 adaptador.Fill(dados);
                 foreach (DataRow dr in dados.Rows)
                 {
@@ -201,75 +149,72 @@ namespace BaseDados
             }
             finally
             {
-                connection.Close();
+                conexao.Close();
             }
-
-            #endregion
-
-
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            String baseDados = Application.StartupPath + @"\DBSQLite.db";
-            String conexao = @"DataSource = " + baseDados + "; version = 3";
-            SQLiteConnection connection = new SQLiteConnection(conexao);
 
-            //#region Excluir Dados SQLite
             lblResultado.Text = "";
             Lista.Rows.Clear();
 
             try
             {
-                connection.Open();
-                SQLiteCommand command = new SQLiteCommand(conexao);
+                EstabelecendoConexao();
+                SQLiteCommand deletarDados = new SQLiteCommand(conexao);
                 string nome = txtNome.Text;
                 string email = txtEmail.Text;
-                command.CommandText = "delete from Pessoas where nome like '" + nome + "' OR email like '" + Email +"'";
-                lblResultado.Text = "Dados deletados.";
-
-            }
+                if ((!nome.Equals("") && nome != null) || (!email.Equals("") && email != null))
+                {
+                    deletarDados.CommandText = "delete from Pessoas where nome like '" + nome + "' OR email like '" + Email + "'";
+                    lblResultado.Text = "Dados deletados.";
+                    deletarDados.ExecuteNonQuery();
+                    deletarDados.Dispose();
+                }
+                else
+                {
+                    deletarDados.CommandText = "delete from pessoas WHERE nome = ''";
+                    deletarDados.ExecuteNonQuery();
+                    lblResultado.Text = "Apenas os dados com nome e email vazios foram deletados.";
+                    EncerrandoConexao(conexao);
+                }
+            }          
             catch (Exception ex)
             {
 
-                lblResultado.Text += "Erro.";
+                lblResultado.Text = ex.Message;
                 Lista.Rows.Clear();
             }
             finally
             {
-                connection.Close();
+                EncerrandoConexao(conexao);
             }
 
-        }
+        }    
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
-            String baseDados = Application.StartupPath + @"\DBSQLite.db";
-            String conexao = @"DataSource = " + baseDados + "; version = 3";
-            SQLiteConnection connection = new SQLiteConnection(conexao);
-
-            //#region Excluir Dados SQLite
             lblResultado.Text = "";
             //Lista.Rows.Clear();
 
             try
             {
-                connection.Open();
-                SQLiteCommand command = new SQLiteCommand();
-                command.Connection = connection;
+                EstabelecendoConexao();
+                SQLiteCommand editarDados = new SQLiteCommand();
+                editarDados.Connection = conexao;
 
                 int id = (int)Lista.SelectedRows[0].Cells[0].Value;
                 string nome = txtNome.Text;
                 string email = txtEmail.Text;
                
                 string query = "update Pessoas set nome = '"+ nome + "', email = '" + email + "' where id = " + id;
-                command.CommandText = query;
+                editarDados.CommandText = query;
 
-                command.ExecuteNonQuery();
+                editarDados.ExecuteNonQuery();
 
                 lblResultado.Text = "Dados atualizados.";
-                command.Dispose();
+                editarDados.Dispose();
 
             }
             catch (Exception ex)
@@ -280,7 +225,7 @@ namespace BaseDados
             }
             finally
             {
-                connection.Close();
+                EncerrandoConexao(conexao);
             }
 
         }
