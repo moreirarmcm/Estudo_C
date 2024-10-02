@@ -1,9 +1,18 @@
-IF NOT EXISTS (select* from sys.databases where name = 'BaseKarate')
+IF NOT EXISTS (select* from sys.databases where name = 'GuerreirosDoFuturo')
 BEGIN
-	CREATE DATABASE BaseKarate
+	CREATE DATABASE GuerreirosDoFuturo
+	WAITFOR DELAY '00:00:05'
+
+	PRINT 'Base "GuerreirosDoFuturo" Criada;'
 END;
-	
-USE BaseKarate
+
+--Gambiarra pra impedir o SQL de tentar se conectar antes da finalização da criação da base.
+--WHILE (NOT EXISTS(select* from sys.databases where name = 'GuerreirosDoFuturo'))
+--BEGIN
+--	WAITFOR DELAY '00:00:05'
+--END;
+
+USE GuerreirosDoFuturo;
 
 IF NOT EXISTS (select* from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'Aluno')
 BEGIN
@@ -18,6 +27,7 @@ BEGIN
 		Endereco VARCHAR(255),
 		Telefone VARCHAR(15)
 	)
+PRINT 'Tabela "Aluno" Criada;'
 END;
 
 IF NOT EXISTS (select* from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'Responsavel')
@@ -29,4 +39,7 @@ BEGIN
 		Telefone VARCHAR(50) NOT NULL,
 		Parentesco VARCHAR(50) NOT NULL
 	)
+PRINT 'Tabela "Responsavel" Criada;'
 END;
+
+--DROP DATABASE GuerreirosDoFuturo
