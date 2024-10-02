@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\morei\\Documents\\GitHub\\BaseKarate\\BaseKarate\\BaseKarate.csproj",
+      "projectUniqueName": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\BaseKarate\\BaseKarate.csproj",
       "projectName": "BaseKarate",
-      "projectPath": "C:\\Users\\morei\\Documents\\GitHub\\BaseKarate\\BaseKarate\\BaseKarate.csproj",
+      "projectPath": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\BaseKarate\\BaseKarate.csproj",
       "packagesPath": "C:\\Users\\morei\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\morei\\Documents\\GitHub\\BaseKarate\\BaseKarate\\obj\\",
+      "outputPath": "C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\BaseKarate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\morei\\AppData\\Roaming\\NuGet\\NuGet.Config",

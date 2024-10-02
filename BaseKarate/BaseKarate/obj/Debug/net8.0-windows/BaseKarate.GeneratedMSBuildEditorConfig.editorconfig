@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BaseKarate
-build_property.ProjectDir = C:\Users\morei\Documents\GitHub\BaseKarate\BaseKarate\
+build_property.ProjectDir = C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
