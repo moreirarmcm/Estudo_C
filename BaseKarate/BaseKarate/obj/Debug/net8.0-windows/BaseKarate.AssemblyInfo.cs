@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BaseKarate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f626330c2c70e5eca3ebea156fbcaf4bbb8b5445")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de11ddb7496956c032975a0a767e83efc95bc377")]
 [assembly: System.Reflection.AssemblyProductAttribute("BaseKarate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BaseKarate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
