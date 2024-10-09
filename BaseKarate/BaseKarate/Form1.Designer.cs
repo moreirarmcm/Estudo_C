@@ -28,31 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            lblTeste = new Label();
+            txtTeste = new TextBox();
+            btnMenu = new Button();
             SuspendLayout();
             // 
-            // button1
+            // lblTeste
             // 
-            button1.Location = new Point(655, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            lblTeste.BackColor = SystemColors.ButtonFace;
+            lblTeste.BorderStyle = BorderStyle.FixedSingle;
+            lblTeste.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTeste.ForeColor = SystemColors.ActiveCaptionText;
+            lblTeste.Location = new Point(33, 23);
+            lblTeste.Name = "lblTeste";
+            lblTeste.Size = new Size(736, 113);
+            lblTeste.TabIndex = 1;
+            lblTeste.Text = "label1";
+            // 
+            // txtTeste
+            // 
+            txtTeste.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTeste.Location = new Point(33, 168);
+            txtTeste.Name = "txtTeste";
+            txtTeste.Size = new Size(736, 31);
+            txtTeste.TabIndex = 2;
+            // 
+            // btnMenu
+            // 
+            btnMenu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMenu.Location = new Point(323, 274);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(189, 59);
+            btnMenu.TabIndex = 3;
+            btnMenu.Text = "Acessar o Menu";
+            btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Click += btnMenu_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(btnMenu);
+            Controls.Add(txtTeste);
+            Controls.Add(lblTeste);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
+        private Label lblTeste;
+        private TextBox txtTeste;
+        private Button btnMenu;
     }
 }

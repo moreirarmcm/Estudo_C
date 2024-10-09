@@ -19,6 +19,7 @@ BEGIN
 	CREATE TABLE Aluno(
 		Codigo INT PRIMARY KEY IDENTITY,
 		Nome VARCHAR(50) NOT NULL,
+		CPF VARCHAR(50) NOT NULL,
 		Graduacao VARCHAR (12) NOT NULL,
 		Sexo CHAR(1),
 		Nascimento DATE,
@@ -29,6 +30,8 @@ BEGIN
 	)
 PRINT 'Tabela "Aluno" Criada;'
 END;
+
+INSERT INTO Aluno (Nome,Graduacao,Sexo,Nascimento,Criacao,Endereco,Telefone
 
 IF NOT EXISTS (select* from INFORMATION_SCHEMA.TABLES where TABLE_NAME = 'Responsavel')
 BEGIN

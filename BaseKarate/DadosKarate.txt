@@ -1,0 +1,4 @@
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'Tatiana Renata' AND CPF = '-') BEGIN INSERT INTO Responsavel (Nome, Endereco, Telefone, Parentesco) VALUES ('Tatiana Renata','Rua dos Operários, 1321 - Casa 3','-','Pai/Mãe')
+ 
+INSERT INTO Aluno(Nome, CPF, Graduacao, Sexo, Nascimento, CodigoResponsavel, Criacao, Endereco, Telefone) SELECT '', '46285061831', 'Marrom (1° Kyu)', 'M', 09/10/1996 00:00:00, 'CPF', 08/10/2024 22:49:08, 'Rua dos Operários, 1321 - Casa 3', '(11) 95439-8250' from Responsavel WHERE CPF = '-'
+ 
