@@ -82,8 +82,6 @@ namespace BaseKarate
             try
 
             {
-
-
                 str_inserir_responsavel = "IF NOT EXISTS (select Codigo from Responsavel where Nome = '" + nome_responsavel + "' AND CPF = '" + cpf_responsavel + "')"
                                         + " BEGIN " 
                                         + "INSERT INTO Responsavel (Nome, Endereco, Telefone, Parentesco) VALUES (" 

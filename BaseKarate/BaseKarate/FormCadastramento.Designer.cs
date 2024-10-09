@@ -53,11 +53,10 @@
             comboGraduacao = new ComboBox();
             comboParentesco = new ComboBox();
             btnInsert = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            btnLimpar = new Button();
             timeDataNascimento = new DateTimePicker();
             timeInicio = new DateTimePicker();
-            lblTeste = new Label();
+            btnVoltar = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -274,33 +273,24 @@
             // btnInsert
             // 
             btnInsert.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInsert.Location = new Point(256, 551);
+            btnInsert.Location = new Point(125, 539);
             btnInsert.Name = "btnInsert";
-            btnInsert.Size = new Size(162, 65);
+            btnInsert.Size = new Size(392, 65);
             btnInsert.TabIndex = 37;
-            btnInsert.Text = "Cadastrar";
+            btnInsert.Text = "Cadastrar novo aluno";
             btnInsert.UseVisualStyleBackColor = true;
             btnInsert.Click += btnInsert_Click;
             // 
-            // button1
+            // btnLimpar
             // 
-            button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(12, 539);
-            button1.Name = "button1";
-            button1.Size = new Size(49, 37);
-            button1.TabIndex = 38;
-            button1.Text = "Limpar campos";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(67, 539);
-            button2.Name = "button2";
-            button2.Size = new Size(69, 37);
-            button2.TabIndex = 39;
-            button2.Text = "Voltar ao menu";
-            button2.UseVisualStyleBackColor = true;
+            btnLimpar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnLimpar.Location = new Point(149, 639);
+            btnLimpar.Name = "btnLimpar";
+            btnLimpar.Size = new Size(149, 32);
+            btnLimpar.TabIndex = 38;
+            btnLimpar.Text = "Limpar campos";
+            btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // timeDataNascimento
             // 
@@ -319,24 +309,26 @@
             timeInicio.TabIndex = 41;
             timeInicio.Value = new DateTime(2024, 10, 5, 23, 16, 19, 0);
             // 
-            // lblTeste
+            // btnVoltar
             // 
-            lblTeste.Location = new Point(35, 634);
-            lblTeste.Name = "lblTeste";
-            lblTeste.Size = new Size(610, 87);
-            lblTeste.TabIndex = 42;
-            lblTeste.Text = "label13";
+            btnVoltar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVoltar.Location = new Point(330, 639);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(149, 32);
+            btnVoltar.TabIndex = 42;
+            btnVoltar.Text = "Voltar ao menu";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // FormCadastramento
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 730);
-            Controls.Add(lblTeste);
+            Controls.Add(btnVoltar);
             Controls.Add(timeInicio);
             Controls.Add(timeDataNascimento);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnLimpar);
             Controls.Add(btnInsert);
             Controls.Add(comboParentesco);
             Controls.Add(comboGraduacao);
@@ -396,10 +388,9 @@
         private ComboBox comboGraduacao;
         private ComboBox comboParentesco;
         private Button btnInsert;
-        private Button button1;
-        private Button button2;
+        private Button btnLimpar;
         private DateTimePicker timeDataNascimento;
         private DateTimePicker timeInicio;
-        private Label lblTeste;
+        private Button btnVoltar;
     }
 }

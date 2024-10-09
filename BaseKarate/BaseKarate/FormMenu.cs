@@ -27,5 +27,10 @@ namespace BaseKarate
             FormCadastramento formCadastramento = new FormCadastramento();
             formCadastramento.ShowDialog();
         }
+
+        private void btnEncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

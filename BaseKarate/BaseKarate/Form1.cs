@@ -24,8 +24,9 @@ namespace BaseKarate
             {
                 administracao.CriandoBaseDados();
                 FormMenu form_menu = new FormMenu();
-                form_menu.Show(this);
-
+                this.Hide();
+                form_menu.ShowDialog();
+                this.Close();
             }
             catch (Exception ex)
             {

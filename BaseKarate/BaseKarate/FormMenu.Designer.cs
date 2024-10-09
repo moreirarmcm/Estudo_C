@@ -35,6 +35,7 @@
             btnEditar = new Button();
             btnExcluir = new Button();
             lblResultado = new Label();
+            btnEncerrar = new Button();
             SuspendLayout();
             // 
             // btnCadastrar
@@ -107,11 +108,23 @@
             lblResultado.TabIndex = 6;
             lblResultado.Text = "O que você deseja fazer?";
             // 
+            // btnEncerrar
+            // 
+            btnEncerrar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEncerrar.Location = new Point(711, 475);
+            btnEncerrar.Name = "btnEncerrar";
+            btnEncerrar.Size = new Size(151, 64);
+            btnEncerrar.TabIndex = 7;
+            btnEncerrar.Text = "Encerrar ";
+            btnEncerrar.UseVisualStyleBackColor = true;
+            btnEncerrar.Click += btnEncerrar_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(888, 503);
+            ClientSize = new Size(888, 591);
+            Controls.Add(btnEncerrar);
             Controls.Add(lblResultado);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
@@ -134,5 +147,6 @@
         private Button btnEditar;
         private Button btnExcluir;
         private Label lblResultado;
+        private Button btnEncerrar;
     }
 }
