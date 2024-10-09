@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using Mysqlx.Crud;
+using System.Data.SqlClient;
 
 namespace BaseKarate
 {
@@ -13,35 +14,25 @@ namespace BaseKarate
         private static String nomeBase = Application.StartupPath + @"GuerreirosDoFuturo.db";
         private static String caminhoBase = @"Data Source = " + nomeBase + "; Version = 3";
         private SQLiteConnection conexao = new SQLiteConnection(caminhoBase);
-
+        bool baseNova = false;
         public void CriandoBaseDados()
         {
             //nomeBase = Application.StartupPath + @"GuerreirosDoFuturo.db";
-           // caminhoBase = @"Data Source = " + nomeBase + "; Version = 3";
+            // caminhoBase = @"Data Source = " + nomeBase + "; Version = 3";
             if (!File.Exists(nomeBase))
             {
+                baseNova = true;
                 SQLiteConnection.CreateFile(nomeBase);
-            }
-           // conexao = new SQLiteConnection(caminhoBase);
-            try
-            {
                 conexao.Open();
-                CriandoTabelas();
-                
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
+                CriandoTabelas(baseNova); // True para tabela no
             }
         }
-        private void CriandoTabelas()
+
+        private void CriandoTabelas(bool baseNova)
         {
             SQLiteCommand tabela_aluno, tabela_responsavel;
-            #region Tabela Aluno
+       
+            #region Criando a tabela 'Aluno'
             tabela_aluno = conexao.CreateCommand();
             tabela_aluno.CommandText = @"CREATE TABLE IF NOT EXISTS Aluno(
                                                 Codigo INT PRIMARY KEY AUTOINCREMENT,
@@ -58,7 +49,7 @@ namespace BaseKarate
             tabela_aluno.ExecuteNonQuery();
             #endregion
 
-            #region Tabela Responsável
+            #region Criando a tabela 'Responsavel'
             tabela_responsavel = conexao.CreateCommand();
             tabela_responsavel.CommandText = @"CREATE TABLE IF NOT EXISTS Responsavel(
                                                Codigo INT PRIMARY KEY AUTOINCREMENT,
@@ -69,7 +60,16 @@ namespace BaseKarate
 	                                         )";
             tabela_responsavel.ExecuteNonQuery();
             #endregion
-           
+
+            #region Inserindo todos os dados de backup
+            if (baseNova == true)
+            {
+                SQLiteCommand insert_backup = new SQLiteCommand(conexao);
+                insert_backup.CommandText = File.ReadAllText("C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\DadosKarate.txt");
+                insert_backup.ExecuteNonQuery();
+            }
+            #endregion
+            
             conexao.Close();
         }
 
