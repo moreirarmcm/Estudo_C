@@ -58,6 +58,7 @@
             btnListarAlunos.TabIndex = 1;
             btnListarAlunos.Text = "Listar Alunos";
             btnListarAlunos.UseVisualStyleBackColor = true;
+            btnListarAlunos.Click += btnListarAlunos_Click;
             // 
             // btnListarResponsaveis
             // 
@@ -78,6 +79,7 @@
             btnConsultar.TabIndex = 3;
             btnConsultar.Text = "Consultar aluno";
             btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // btnEditar
             // 

@@ -32,5 +32,16 @@ namespace BaseKarate
         {
             this.Close();
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarAlunos_Click(object sender, EventArgs e)
+        {
+            FormListagem formListagem = new FormListagem();
+            formListagem.ShowDialog();
+        }
     }
 }

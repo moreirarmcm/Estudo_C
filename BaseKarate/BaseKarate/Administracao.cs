@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using Mysqlx.Crud;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace BaseKarate
 {
@@ -112,6 +113,32 @@ namespace BaseKarate
                 conexao.Close();
             }
 
+        }
+
+        public DataTable ListandoDados()
+        {
+            string seleciona_dados =
+                  "select alu.Codigo as 'Matricula', alu.Nome,alu.Graduacao, alu.Nascimento,Alu.Endereco, alu.Contato,res.Nome,res.Parentesco,res.Contato,alu.Criacao" +
+                  "from Aluno alu" +
+                  "join Responsavel res on res.Codigo = alu.CodigoResponsavel";
+            conexao = new SQLiteConnection(caminhoBase);
+            conexao.Open();
+            DataTable tabela_dados = new DataTable();
+            try
+            {
+
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(seleciona_dados, conexao);
+                adapter.Fill(tabela_dados);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return tabela_dados;
         }
     }
 }

@@ -37,3 +37,4 @@ C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\bin\Debug\net8.0-
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\bin\Debug\net8.0-windows\PT\System.Data.SqlServerCe.resources.dll
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\obj\Debug\net8.0-windows\BaseKarate.FormCadastramento.resources
 C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\obj\Debug\net8.0-windows\BaseKarate.FormMenu.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\BaseKarate\BaseKarate\obj\Debug\net8.0-windows\BaseKarate.FormListagem.resources
