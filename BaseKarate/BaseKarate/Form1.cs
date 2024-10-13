@@ -11,8 +11,6 @@ namespace BaseKarate
             InitializeComponent();
         }
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -22,7 +20,6 @@ namespace BaseKarate
         {
             try
             {
-                administracao.CriandoBaseDados();
                 FormMenu form_menu = new FormMenu();
                 this.Hide();
                 form_menu.ShowDialog();

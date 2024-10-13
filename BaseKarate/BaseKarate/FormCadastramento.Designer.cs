@@ -57,6 +57,7 @@
             timeDataNascimento = new DateTimePicker();
             timeInicio = new DateTimePicker();
             btnVoltar = new Button();
+            lblTeste = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -273,7 +274,7 @@
             // btnInsert
             // 
             btnInsert.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInsert.Location = new Point(125, 539);
+            btnInsert.Location = new Point(113, 594);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(392, 65);
             btnInsert.TabIndex = 37;
@@ -284,7 +285,7 @@
             // btnLimpar
             // 
             btnLimpar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnLimpar.Location = new Point(149, 639);
+            btnLimpar.Location = new Point(151, 674);
             btnLimpar.Name = "btnLimpar";
             btnLimpar.Size = new Size(149, 32);
             btnLimpar.TabIndex = 38;
@@ -312,7 +313,7 @@
             // btnVoltar
             // 
             btnVoltar.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnVoltar.Location = new Point(330, 639);
+            btnVoltar.Location = new Point(321, 674);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(149, 32);
             btnVoltar.TabIndex = 42;
@@ -320,11 +321,20 @@
             btnVoltar.UseVisualStyleBackColor = true;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // lblTeste
+            // 
+            lblTeste.Location = new Point(26, 527);
+            lblTeste.Name = "lblTeste";
+            lblTeste.Size = new Size(619, 64);
+            lblTeste.TabIndex = 43;
+            lblTeste.Text = "lblTeste";
+            // 
             // FormCadastramento
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 730);
+            Controls.Add(lblTeste);
             Controls.Add(btnVoltar);
             Controls.Add(timeInicio);
             Controls.Add(timeDataNascimento);
@@ -392,5 +402,6 @@
         private DateTimePicker timeDataNascimento;
         private DateTimePicker timeInicio;
         private Button btnVoltar;
+        private Label lblTeste;
     }
 }

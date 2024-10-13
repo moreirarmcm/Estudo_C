@@ -1,4 +1,4 @@
-IF NOT EXISTS (select Codigo from Responsavel where Nome = 'Tatiana Renata' AND CPF = '-') BEGIN INSERT INTO Responsavel (Nome, Endereco, Telefone, Parentesco) VALUES ('Tatiana Renata','Rua dos Operários, 1321 - Casa 3','-','Pai/Mãe')
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'Tatiana Renata' AND CPF = '987.654.321-01') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('Tatiana Renata','Rua dos Operários, 1321','(11) 91234-5678','987.654.321-01','Pai/Mãe') END
  
-INSERT INTO Aluno(Nome, CPF, Graduacao, Sexo, Nascimento, CodigoResponsavel, Criacao, Endereco, Telefone) SELECT '', '*******', 'Marrom (1° Kyu)', 'M', 09/10/1996 00:00:00, 'CPF', 08/10/2024 22:49:08, 'Rua dos Operários, **** - Casa 3', '(11) *****-****' from Responsavel WHERE CPF = '-'
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'Renan Marcelino de Castro Moreira', '123.456.789.-01', 'Marrom (1° Kyu)', 'M', '09/10/1996 23:16:19','12/10/2024 22:55:48', 'Rua dos Operários, 1321', '(11) 95439-8250', res.Codigo from Responsavel res WHERE CPF = '987.654.321-01'
  

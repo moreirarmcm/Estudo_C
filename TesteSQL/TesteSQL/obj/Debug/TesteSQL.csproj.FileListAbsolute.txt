@@ -1,0 +1,10 @@
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\bin\Debug\TesteSQL.exe.config
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\bin\Debug\TesteSQL.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\bin\Debug\TesteSQL.pdb
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.csproj.AssemblyReference.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.Form1.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.Properties.Resources.resources
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.csproj.GenerateResource.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.csproj.CoreCompileInputs.cache
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.exe
+C:\Users\morei\Documents\GitHub\Estudo_C\TesteSQL\TesteSQL\obj\Debug\TesteSQL.pdb

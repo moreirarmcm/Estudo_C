@@ -69,6 +69,7 @@
             btnListarResponsaveis.TabIndex = 2;
             btnListarResponsaveis.Text = "Listar responsáveis";
             btnListarResponsaveis.UseVisualStyleBackColor = true;
+            btnListarResponsaveis.Click += btnListarResponsaveis_Click;
             // 
             // btnConsultar
             // 

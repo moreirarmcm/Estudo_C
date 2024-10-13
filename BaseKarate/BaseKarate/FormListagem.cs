@@ -19,7 +19,7 @@ namespace BaseKarate
         public FormListagem()
         {
             InitializeComponent();
-            ListaDados();
+            // ListaDados();
         }
 
         private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,21 +29,26 @@ namespace BaseKarate
 
         private void ListaDados()
         {
-           
-            DataTable tabela_dados = new DataTable();
-            //tabela_dados = administracao.ListandoDados();
-            try
+          
+            /*try
             {
-                tabela_dados = administracao.ListandoDados();
-                foreach (DataRow td in tabela_dados.Rows)
+                DataTable tabela_dados = administracao.ListandoDados();
+                lblTeste.Text = "Entrou no foreach para adicionar no edittext.";
+                // dataLista2.DataSource = tabela_dados;
+                foreach (DataRow dt in tabela_dados.Rows)
                 {
-                    dataLista.Rows.Add(td.ItemArray);
+                    dataLista2.Rows.Add(dt.ItemArray);
                 }
-            }
+                }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-            }
+               lblTeste.Text = " - " + ex.Message;
+            }*/
+        }
+
+        private void btnTeste_Click(object sender, EventArgs e)
+        {
+            ListaDados();
         }
     }
 }

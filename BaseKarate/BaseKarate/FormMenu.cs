@@ -43,5 +43,10 @@ namespace BaseKarate
             FormListagem formListagem = new FormListagem();
             formListagem.ShowDialog();
         }
+
+        private void btnListarResponsaveis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

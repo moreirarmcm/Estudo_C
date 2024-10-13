@@ -16,7 +16,7 @@ namespace BaseKarate
 {
     public partial class FormCadastramento : Form
     {
-        private string nome_aluno, cpf_aluno, endereco, telefone_aluno, telefone_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco;
+        private string nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco;
         private DateTime data_nascimento, inicio_karate;
         private char sexo;
 
@@ -56,13 +56,13 @@ namespace BaseKarate
             nome_aluno = txtNomeAluno.Text;
             cpf_aluno = txtCPF.Text;
             endereco = txtEndereco.Text;
-            telefone_aluno = txtContatoAluno.Text;
+            contato_aluno = txtContatoAluno.Text;
             graduacao = comboGraduacao.SelectedItem.ToString();
             nome_responsavel = txtNomeResponsavel.Text;
             cpf_responsavel = txtCPFResponsavel.Text;
             parentesco = comboParentesco.SelectedItem.ToString();
             data_nascimento = timeDataNascimento.Value;
-            telefone_responsavel = txtContatoResponsavel.Text;
+            contato_responsavel = txtContatoResponsavel.Text;
             inicio_karate = timeInicio.Value;
             if (radioMasculino.Checked)
             {
@@ -73,8 +73,7 @@ namespace BaseKarate
                 sexo = 'F';
             }
             Administracao administracao = new Administracao();
-            administracao.InserindoDados(nome_aluno, cpf_aluno, endereco, telefone_aluno, telefone_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco, data_nascimento, inicio_karate, sexo);
-            txtNomeAluno.Text = "";
+            lblTeste.Text = administracao.InserindoDados(nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco, data_nascimento, inicio_karate, sexo);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
