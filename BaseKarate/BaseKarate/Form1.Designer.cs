@@ -34,9 +34,9 @@
             // btnMenu
             // 
             btnMenu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMenu.Location = new Point(82, 179);
+            btnMenu.Location = new Point(32, 46);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(189, 59);
+            btnMenu.Size = new Size(177, 63);
             btnMenu.TabIndex = 3;
             btnMenu.Text = "Acessar o Menu";
             btnMenu.UseVisualStyleBackColor = true;
@@ -46,10 +46,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 289);
+            ClientSize = new Size(243, 145);
             Controls.Add(btnMenu);
             Name = "Form1";
-            Text = "Form1";
+            Text = "66666666666666666666";
             Load += Form1_Load;
             ResumeLayout(false);
         }

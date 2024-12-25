@@ -2,3 +2,23 @@ IF NOT EXISTS (select Codigo from Responsavel where Nome = 'Tatiana Renata' AND 
  
 INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'Renan Marcelino de Castro Moreira', '123.456.789.-01', 'Marrom (1° Kyu)', 'M', '09/10/1996 23:16:19','12/10/2024 22:55:48', 'Rua dos Operários, 1321', '(11) 95439-8250', res.Codigo from Responsavel res WHERE CPF = '987.654.321-01'
  
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'aaaaaa' AND CPF = 'sa3rr2323') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('aaaaaa','vvewvwvvvwevwevwvw','sssss','sa3rr2323','Irmão/Irmã') END
+ 
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'Renan Marcelino de Castro Moreira', '4627382129434', 'Marrom (1° Kyu)', 'M', '05/10/2024 23:16:19','11/12/2024 12:21:37', 'vvewvwvvvwevwevwvw', '', res.Codigo from Responsavel res WHERE CPF = 'sa3rr2323'
+ 
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'teste' AND CPF = '1235353') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('teste','Rua teste','1234534','1235353','Pai/Mãe') END
+ 
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'Teste 1', '1234567876', 'Branca (7° Kyu)', 'F', '05/10/2024 23:16:19','23/12/2024 22:08:13', 'Rua teste', '1123456', res.Codigo from Responsavel res WHERE CPF = '1235353'
+ 
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'efewfwef' AND CPF = 'fefef') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('efewfwef','ewfefewf','efewfewffefe','fefef','Avô/Avó') END
+ 
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'ffefwe', 'wefwefewf', 'Vermelha (5° Kyu)', 'M', '05/10/2024 23:16:19','25/12/2024 13:05:41', 'ewfefewf', 'fwefefewfwef', res.Codigo from Responsavel res WHERE CPF = 'fefef'
+ 
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'fsdsds' AND CPF = 'aaaa') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('fsdsds','aaaa','ssss','aaaa','Avô/Avó') END
+ 
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'dwdwdw', 'wwwww', 'Laranja (4° Kyu)', 'M', '05/10/2024 23:16:19','25/12/2024 13:06:41', 'aaaa', 'dddd', res.Codigo from Responsavel res WHERE CPF = 'aaaa'
+ 
+IF NOT EXISTS (select Codigo from Responsavel where Nome = 'sdacasc' AND CPF = 'sdasdasdas') BEGIN INSERT INTO Responsavel (Nome, Endereco, Contato,CPF, Parentesco) VALUES ('sdacasc','dasdasdsad','ascasd','sdasdasdas','Tio/Tia') END
+ 
+INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'sdsadas', 'sadsadsadsad', 'Verde (3° Kyu)', 'M', '25/12/2024 13:06:41','25/12/2024 13:08:32', 'dasdasdsad', 'dsadsadsa', res.Codigo from Responsavel res WHERE CPF = 'sdasdasdas'
+ 

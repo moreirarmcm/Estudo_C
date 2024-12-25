@@ -28,62 +28,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblTeste = new Label();
-            dataLista2 = new DataGridView();
-            Codigo = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataLista2).BeginInit();
+            label1 = new Label();
+            dataLista = new DataGridView();
+            CodigoAluno = new DataGridViewTextBoxColumn();
+            NomeAluno = new DataGridViewTextBoxColumn();
+            cpfAluno = new DataGridViewTextBoxColumn();
+            Graduacao = new DataGridViewTextBoxColumn();
+            Nascimento = new DataGridViewTextBoxColumn();
+            EnderecoAluno = new DataGridViewTextBoxColumn();
+            ContatoAluno = new DataGridViewTextBoxColumn();
+            NomeResponsavel = new DataGridViewTextBoxColumn();
+            ContatoResponsavel = new DataGridViewTextBoxColumn();
+            cpfResponsavel = new DataGridViewTextBoxColumn();
+            Parentesco = new DataGridViewTextBoxColumn();
+            Criacao = new DataGridViewTextBoxColumn();
+            btnPesquisar = new Button();
+            txtConsulta = new TextBox();
+            btnAtualizar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataLista).BeginInit();
             SuspendLayout();
             // 
-            // lblTeste
+            // label1
             // 
-            lblTeste.Location = new Point(30, 19);
-            lblTeste.Name = "lblTeste";
-            lblTeste.Size = new Size(774, 114);
-            lblTeste.TabIndex = 3;
-            lblTeste.Text = "label1";
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 38);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 50);
+            label1.TabIndex = 3;
+            label1.Text = "Procurar por nome ou CPF:";
+            label1.Click += label1_Click;
             // 
-            // dataLista2
+            // dataLista
             // 
-            dataLista2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataLista2.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome });
-            dataLista2.Location = new Point(12, 111);
-            dataLista2.Name = "dataLista2";
-            dataLista2.RowHeadersWidth = 51;
-            dataLista2.Size = new Size(918, 188);
-            dataLista2.TabIndex = 4;
+            dataLista.AllowUserToOrderColumns = true;
+            dataLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataLista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataLista.Columns.AddRange(new DataGridViewColumn[] { CodigoAluno, NomeAluno, cpfAluno, Graduacao, Nascimento, EnderecoAluno, ContatoAluno, NomeResponsavel, ContatoResponsavel, cpfResponsavel, Parentesco, Criacao });
+            dataLista.Location = new Point(12, 188);
+            dataLista.Name = "dataLista";
+            dataLista.RowHeadersWidth = 51;
+            dataLista.Size = new Size(1247, 366);
+            dataLista.TabIndex = 4;
             // 
-            // Codigo
+            // CodigoAluno
             // 
-            Codigo.HeaderText = "Codigo";
-            Codigo.MinimumWidth = 6;
-            Codigo.Name = "Codigo";
-            Codigo.Width = 125;
+            CodigoAluno.HeaderText = "Matrícula";
+            CodigoAluno.MinimumWidth = 6;
+            CodigoAluno.Name = "CodigoAluno";
             // 
-            // Nome
+            // NomeAluno
             // 
-            Nome.HeaderText = "Nome";
-            Nome.MinimumWidth = 6;
-            Nome.Name = "Nome";
-            Nome.Width = 125;
+            NomeAluno.HeaderText = "Nome";
+            NomeAluno.MinimumWidth = 6;
+            NomeAluno.Name = "NomeAluno";
+            NomeAluno.Width = 79;
+            // 
+            // cpfAluno
+            // 
+            cpfAluno.HeaderText = "CPF";
+            cpfAluno.MinimumWidth = 6;
+            cpfAluno.Name = "cpfAluno";
+            cpfAluno.Width = 62;
+            // 
+            // Graduacao
+            // 
+            Graduacao.HeaderText = "Graduação";
+            Graduacao.MinimumWidth = 6;
+            Graduacao.Name = "Graduacao";
+            Graduacao.Width = 110;
+            // 
+            // Nascimento
+            // 
+            Nascimento.HeaderText = "Data de Nascimento";
+            Nascimento.MinimumWidth = 6;
+            Nascimento.Name = "Nascimento";
+            Nascimento.Width = 159;
+            // 
+            // EnderecoAluno
+            // 
+            EnderecoAluno.HeaderText = "Endereço";
+            EnderecoAluno.MinimumWidth = 6;
+            EnderecoAluno.Name = "EnderecoAluno";
+            // 
+            // ContatoAluno
+            // 
+            ContatoAluno.HeaderText = "Contato";
+            ContatoAluno.MinimumWidth = 6;
+            ContatoAluno.Name = "ContatoAluno";
+            ContatoAluno.Width = 91;
+            // 
+            // NomeResponsavel
+            // 
+            NomeResponsavel.HeaderText = "Nome do Responsável";
+            NomeResponsavel.MinimumWidth = 6;
+            NomeResponsavel.Name = "NomeResponsavel";
+            NomeResponsavel.Width = 171;
+            // 
+            // ContatoResponsavel
+            // 
+            ContatoResponsavel.HeaderText = "Contato do Responsável";
+            ContatoResponsavel.MinimumWidth = 6;
+            ContatoResponsavel.Name = "ContatoResponsavel";
+            ContatoResponsavel.Width = 182;
+            // 
+            // cpfResponsavel
+            // 
+            cpfResponsavel.HeaderText = "CPF do Responsável";
+            cpfResponsavel.MinimumWidth = 6;
+            cpfResponsavel.Name = "cpfResponsavel";
+            cpfResponsavel.Width = 155;
+            // 
+            // Parentesco
+            // 
+            Parentesco.HeaderText = "Parentesco";
+            Parentesco.MinimumWidth = 6;
+            Parentesco.Name = "Parentesco";
+            Parentesco.Width = 109;
+            // 
+            // Criacao
+            // 
+            Criacao.HeaderText = "Data de Criação";
+            Criacao.MinimumWidth = 6;
+            Criacao.Name = "Criacao";
+            Criacao.Width = 133;
+            // 
+            // btnPesquisar
+            // 
+            btnPesquisar.Location = new Point(167, 91);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Size = new Size(148, 32);
+            btnPesquisar.TabIndex = 5;
+            btnPesquisar.Text = "Pesquisar";
+            btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
+            // 
+            // txtConsulta
+            // 
+            txtConsulta.Location = new Point(216, 40);
+            txtConsulta.Multiline = true;
+            txtConsulta.Name = "txtConsulta";
+            txtConsulta.Size = new Size(389, 32);
+            txtConsulta.TabIndex = 6;
+            // 
+            // btnAtualizar
+            // 
+            btnAtualizar.Location = new Point(336, 91);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(148, 32);
+            btnAtualizar.TabIndex = 7;
+            btnAtualizar.Text = "Alterar dados";
+            btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(942, 448);
-            Controls.Add(dataLista2);
-            Controls.Add(lblTeste);
+            ClientSize = new Size(1271, 740);
+            Controls.Add(btnAtualizar);
+            Controls.Add(txtConsulta);
+            Controls.Add(btnPesquisar);
+            Controls.Add(dataLista);
+            Controls.Add(label1);
             Name = "FormListagem";
             Text = "FormListagem";
-            ((System.ComponentModel.ISupportInitialize)dataLista2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataLista).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Label lblTeste;
-        private DataGridView dataLista2;
-        private DataGridViewTextBoxColumn Codigo;
-        private DataGridViewTextBoxColumn Nome;
+        private Label label1;
+        private DataGridView dataLista;
+        private DataGridViewTextBoxColumn CodigoAluno;
+        private DataGridViewTextBoxColumn NomeAluno;
+        private DataGridViewTextBoxColumn cpfAluno;
+        private DataGridViewTextBoxColumn Graduacao;
+        private DataGridViewTextBoxColumn Nascimento;
+        private DataGridViewTextBoxColumn EnderecoAluno;
+        private DataGridViewTextBoxColumn ContatoAluno;
+        private DataGridViewTextBoxColumn NomeResponsavel;
+        private DataGridViewTextBoxColumn ContatoResponsavel;
+        private DataGridViewTextBoxColumn cpfResponsavel;
+        private DataGridViewTextBoxColumn Parentesco;
+        private DataGridViewTextBoxColumn Criacao;
+        private Button btnPesquisar;
+        private TextBox txtConsulta;
+        private Button btnAtualizar;
     }
 }

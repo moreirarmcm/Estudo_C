@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -15,11 +16,16 @@ namespace BaseKarate
 {
     public partial class FormListagem : Form
     {
-        Administracao administracao = new Administracao();
+        private Administracao administracao = new Administracao();
+        private DataTable tabela_dados;
         public FormListagem()
         {
             InitializeComponent();
-            // ListaDados();
+            tabela_dados = administracao.ListandoDados(false, null);
+            foreach (DataRow dt in tabela_dados.Rows)
+            {
+                dataLista.Rows.Add(dt.ItemArray);
+            }
         }
 
         private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -27,28 +33,50 @@ namespace BaseKarate
 
         }
 
-        private void ListaDados()
+        private void ListaDados(bool alunoEspecifico, string consulta)
         {
-          
-            /*try
+            if (alunoEspecifico == true)
             {
-                DataTable tabela_dados = administracao.ListandoDados();
-                lblTeste.Text = "Entrou no foreach para adicionar no edittext.";
-                // dataLista2.DataSource = tabela_dados;
-                foreach (DataRow dt in tabela_dados.Rows)
+                dataLista.Rows.Clear();
+                try
                 {
-                    dataLista2.Rows.Add(dt.ItemArray);
+                    DataTable tabela_dados = administracao.ListandoDados(alunoEspecifico, consulta);
+                    // dataLista2.DataSource = tabela_dados;
+                    foreach (DataRow dt in tabela_dados.Rows)
+                    {
+                        dataLista.Rows.Add(dt.ItemArray);
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
-            catch (Exception ex)
-            {
-               lblTeste.Text = " - " + ex.Message;
-            }*/
+            }
         }
 
-        private void btnTeste_Click(object sender, EventArgs e)
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            ListaDados();
+            if (txtConsulta.Text == "" || txtConsulta.Text == null)
+            {
+                ListaDados(false, null);
+            }
+            else
+            {
+                ListaDados(true, txtConsulta.Text);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            int codigo_aluno = (int)dataLista.SelectedRows[0].Cells[0].Value;
+            FormCadastramento formCadastramento = new FormCadastramento(codigo_aluno);
+            formCadastramento.ShowDialog();
         }
     }
 }

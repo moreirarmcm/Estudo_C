@@ -111,31 +111,64 @@ namespace BaseKarate
             return teste;
         }
 
-     /*   public DataTable ListandoDados()
+        public DataTable ListandoDados(bool alunoEspecifico, string consulta)
         {
-            conexao = new SQLiteConnection(caminhoBase);
-            conexao.Open();
-            //string seleciona_dados = "SELECT alu.Codigo, alu.Nome, alu.Graduacao, alu.Nascimento, alu.Endereco, alu.Contato, res.Parentesco, alu.Criacao FROM Aluno alu JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel";
-            string seleciona_dados = "select* from Aluno";
-            DataTable tabela_dados = new DataTable();
-            
-            try
+            using (SqlConnection conexao = new SqlConnection(acesso_base))
             {
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter(seleciona_dados, caminhoBase);
-                adapter.Fill(tabela_dados);
-                return tabela_dados;
+                conexao.Open();
+                String seleciona_dados = null;
+               // String seleciona_dados = "Select res.Codigo, alu.Nome from Aluno alu join Responsavel res on res.Codigo = alu.CodigoResponsavel";
+               
+                if (alunoEspecifico == false) { 
+                    seleciona_dados = "SELECT alu.Codigo, " +
+                                                 "alu.Nome, " +
+                                                 "alu.CPF," +
+                                                 "alu.Graduacao, " +
+                                                 "alu.Nascimento, " +
+                                                 "alu.Endereco, " +
+                                                 "alu.Contato, " +
+                                                 "res.Nome," +
+                                                 "res.Contato, " +
+                                                 "res.CPF," + 
+                                                 "res.Parentesco, " +
+                                                 "alu.Criacao " +
+                                                     "FROM Aluno alu " +
+                                                         "JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel";
+                }
+                else
+                {
+                    seleciona_dados = "SELECT alu.Codigo, " +
+                                                 "alu.Nome as 'NomeAluno', " +
+                                                 "alu.CPF," +
+                                                 "alu.Graduacao, " +
+                                                 "alu.Nascimento, " +
+                                                 "alu.Endereco, " +
+                                                 "alu.Contato, " +
+                                                 "alu.Sexo, " +
+                                                 "res.Nome as 'NomeResponsavel', " +
+                                                 "res.Contato as 'ContatoResponsavel', " +
+                                                 "res.CPF as 'CPFResponsavel'," +
+                                                 "res.Parentesco as 'GrauParentesco', " +
+                                                 "alu.Criacao " +
+                                                     "FROM Aluno alu " +
+                                                         "JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel " +
+                                                         "AND (alu.Nome Like '%" + consulta + "%'  OR alu.CPF = '" + consulta + "' OR alu.Codigo = TRY_CAST('" + consulta + "' as int))";
 
+                }
+                DataTable tabela_dados = new DataTable();
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(seleciona_dados, acesso_base);
+                    adapter.Fill(tabela_dados);
+                    return tabela_dados;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                return tabela_dados;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            return tabela_dados;
-        }*/
+        }
     }
 }
         

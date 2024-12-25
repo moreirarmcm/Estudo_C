@@ -19,13 +19,48 @@ namespace BaseKarate
         private string nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco;
         private DateTime data_nascimento, inicio_karate;
         private char sexo;
-
+        private int acao = 0;
         public FormCadastramento()
         {
             InitializeComponent();
             timeInicio.CustomFormat = "MMMM yyyy";
         }
+        public FormCadastramento(int acao)
+        {
+            this.acao = acao;
+            InitializeComponent();
+            timeInicio.CustomFormat = "MMMM yyyy";
+            Administracao administracao = new Administracao();
+            DataTable tabela_dados = administracao.ListandoDados(true, acao.ToString());
+            DataRow linha_dados = tabela_dados.Rows[0];
 
+            btnInsert.Text = "Atualizar dados";
+            btnLimpar.Visible = false;
+            
+            txtNomeAluno.Text = linha_dados["NomeAluno"].ToString();
+            txtCPF.Text = linha_dados["CPF"].ToString();
+            txtEndereco.Text = linha_dados["Endereco"].ToString();
+            if (linha_dados["Sexo"].ToString().Equals("M"))
+            {
+                radioMasculino.Checked = true;
+            }
+            else
+            {
+                radioFeminino.Checked = true;
+            }
+            txtContatoAluno.Text = linha_dados["Contato"].ToString();
+            comboGraduacao.SelectedItem = linha_dados["Graduacao"].ToString();
+            comboGraduacao.Enabled = false;
+            txtNomeResponsavel.Text = linha_dados["NomeResponsavel"].ToString();
+            txtCPFResponsavel.Text = linha_dados["CPFResponsavel"].ToString(); ;
+            comboParentesco.SelectedItem = linha_dados["GrauParentesco"].ToString();
+            timeDataNascimento.Value = Convert.ToDateTime(linha_dados["Nascimento"]);
+            ;
+            txtContatoResponsavel.Text = linha_dados["ContatoResponsavel"].ToString();
+            //timeInicio.Value;
+
+
+        }
         private void FormCadastramento_Load(object sender, EventArgs e)
         {
 
@@ -53,30 +88,51 @@ namespace BaseKarate
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            nome_aluno = txtNomeAluno.Text;
-            cpf_aluno = txtCPF.Text;
-            endereco = txtEndereco.Text;
-            contato_aluno = txtContatoAluno.Text;
-            graduacao = comboGraduacao.SelectedItem.ToString();
-            nome_responsavel = txtNomeResponsavel.Text;
-            cpf_responsavel = txtCPFResponsavel.Text;
-            parentesco = comboParentesco.SelectedItem.ToString();
-            data_nascimento = timeDataNascimento.Value;
-            contato_responsavel = txtContatoResponsavel.Text;
-            inicio_karate = timeInicio.Value;
-            if (radioMasculino.Checked)
+            if (this.acao == 0)
             {
-                sexo = 'M';
+                nome_aluno = txtNomeAluno.Text;
+                cpf_aluno = txtCPF.Text;
+                endereco = txtEndereco.Text;
+                contato_aluno = txtContatoAluno.Text;
+                graduacao = comboGraduacao.SelectedItem.ToString();
+                nome_responsavel = txtNomeResponsavel.Text;
+                cpf_responsavel = txtCPFResponsavel.Text;
+                parentesco = comboParentesco.SelectedItem.ToString();
+                data_nascimento = timeDataNascimento.Value;
+                contato_responsavel = txtContatoResponsavel.Text;
+                inicio_karate = timeInicio.Value;
+                if (radioMasculino.Checked)
+                {
+                    sexo = 'M';
+                }
+                else if (radioFeminino.Checked)
+                {
+                    sexo = 'F';
+                }
+                Administracao administracao = new Administracao();
+                lblTeste.Text = administracao.InserindoDados(nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco, data_nascimento, inicio_karate, sexo);
+                if (lblTeste.Text == "Dados inseridos com sucesso.")
+                {
+                    LimparCampos(); 
+                }
             }
-            else if (radioFeminino.Checked)
+            else
             {
-                sexo = 'F';
+                
             }
-            Administracao administracao = new Administracao();
-            lblTeste.Text = administracao.InserindoDados(nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco, data_nascimento, inicio_karate, sexo);
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LimparCampos()
         {
             txtNomeAluno.Clear();
             txtCPF.Clear();
@@ -91,11 +147,6 @@ namespace BaseKarate
             timeInicio.Text = "";
             radioMasculino.Checked = false;
             radioFeminino.Checked = false;
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
