@@ -49,4 +49,7 @@ IF NOT EXISTS (select Codigo from Responsavel where Nome = 'wefwefwe' AND CPF = 
  
 INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select 'Renan Moreira', '12345678976', 'Laranja (4° Kyu)', 'M', '05/10/2024 23:16:19','12/10/2024 22:43:28', 'ddfwfwfwe', 'wefwefwefwefw', res.Codigo from Responsavel res WHERE CPF = '11111'
  
+ALTER TABLE Aluno
+ADD Ativo BIT NOT NULL DEFAULT 1
+
 --DROP DATABASE GuerreirosDoFuturo

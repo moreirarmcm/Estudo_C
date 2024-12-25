@@ -57,9 +57,6 @@ namespace BaseKarate
             timeDataNascimento.Value = Convert.ToDateTime(linha_dados["Nascimento"]);
             ;
             txtContatoResponsavel.Text = linha_dados["ContatoResponsavel"].ToString();
-            //timeInicio.Value;
-
-
         }
         private void FormCadastramento_Load(object sender, EventArgs e)
         {
@@ -118,7 +115,31 @@ namespace BaseKarate
             }
             else
             {
-                
+                nome_aluno = txtNomeAluno.Text;
+                cpf_aluno = txtCPF.Text;
+                endereco = txtEndereco.Text;
+                contato_aluno = txtContatoAluno.Text;
+                graduacao = comboGraduacao.SelectedItem.ToString();
+                nome_responsavel = txtNomeResponsavel.Text;
+                cpf_responsavel = txtCPFResponsavel.Text;
+                parentesco = comboParentesco.SelectedItem.ToString();
+                data_nascimento = timeDataNascimento.Value;
+                contato_responsavel = txtContatoResponsavel.Text;
+                inicio_karate = timeInicio.Value;
+                if (radioMasculino.Checked)
+                {
+                    sexo = 'M';
+                }
+                else if (radioFeminino.Checked)
+                {
+                    sexo = 'F';
+                }
+                Administracao administracao = new Administracao();
+                lblTeste.Text = administracao.AtualizandoDados(acao,nome_aluno, cpf_aluno, endereco, contato_aluno, contato_responsavel, graduacao, nome_responsavel, cpf_responsavel, parentesco, data_nascimento, inicio_karate, sexo);
+                if (lblTeste.Text == "Dados alterados com sucesso.")
+                {
+                    LimparCampos();
+                }
             }
         }
 

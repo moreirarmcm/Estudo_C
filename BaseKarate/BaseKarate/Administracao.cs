@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using Mysqlx.Crud;
 using System.Data.SqlClient;
 using System.Data;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace BaseKarate
 {
@@ -82,9 +83,9 @@ namespace BaseKarate
                                         nome_responsavel + "','" + endereco + "','" + contato_responsavel + "','" + cpf_responsavel + "','" + parentesco + "') END";
 
 
-                 str_inserir_aluno = "INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select '" +
-                    nome_aluno + "', '" + cpf_aluno + "', '" + graduacao + "', '" + sexo + "', '" + data_nascimento + "','" + DateTime.Now + "', '" + endereco + "', '" + contato_aluno + "', res.Codigo"
-                  + " from Responsavel res WHERE CPF = '" + cpf_responsavel + "'";
+                str_inserir_aluno = "INSERT INTO Aluno (Nome, CPF, Graduacao, Sexo, Nascimento, Criacao, Endereco, Contato,CodigoResponsavel) select '" +
+                   nome_aluno + "', '" + cpf_aluno + "', '" + graduacao + "', '" + sexo + "', '" + data_nascimento + "','" + DateTime.Now + "', '" + endereco + "', '" + contato_aluno + "', res.Codigo"
+                 + " from Responsavel res WHERE CPF = '" + cpf_responsavel + "'";
 
                 File.AppendAllText("C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\DadosKarate.txt", str_inserir_responsavel);
                 File.AppendAllText("C:\\Users\\morei\\Documents\\GitHub\\Estudo_C\\BaseKarate\\DadosKarate.txt", "\n \n");
@@ -110,6 +111,41 @@ namespace BaseKarate
             }
             return teste;
         }
+        public String AtualizandoDados(int codigo_aluno, string nome_aluno, string cpf_aluno, string endereco, string contato_aluno, string contato_responsavel, string graduacao, string nome_responsavel, string cpf_responsavel, string parentesco, DateTime data_nascimento, DateTime inicio_karate, char sexo)
+        {
+            conexao = new SqlConnection(acesso_base);
+            conexao.Open();
+
+            string str_inserir_responsavel, str_inserir_aluno, str_resultado;
+            try
+            {
+                str_inserir_responsavel = "UPDATE res SET Nome = '" + nome_responsavel + "', Endereco = '" + endereco + "', Contato = '" + contato_responsavel + "', CPF = '" + cpf_responsavel + "', Parentesco = '" + parentesco + "' " +
+                                            "from Aluno alu join Responsavel res on res.Codigo = alu.CodigoResponsavel " +
+                                                "and alu.Codigo = " + codigo_aluno;
+                str_resultado = "Res ok ";
+
+                str_inserir_aluno = "UPDATE alu SET Nome = '" + nome_aluno + "', CPF = '" + cpf_aluno + "', Graduacao = '" + graduacao + "', sexo = '" + sexo + "', Nascimento = '" + data_nascimento + "', Criacao = '" + DateTime.Now + "', Endereco = '" + endereco + "', Contato = '" + contato_aluno + "', CodigoResponsavel =  res.Codigo " +
+                                        "from Aluno alu " +
+                                            "join Responsavel res on res.Codigo = alu.CodigoResponsavel " +
+                                                "and alu.Codigo = " + codigo_aluno;
+
+               
+                SqlCommand inserir_aluno = conexao.CreateCommand();
+                SqlCommand inserir_responsavel = conexao.CreateCommand();
+                inserir_responsavel.CommandText = str_inserir_responsavel;
+                inserir_aluno.CommandText = str_inserir_aluno;
+                inserir_responsavel.ExecuteNonQuery();
+                str_resultado = "Res ok ";
+                inserir_aluno.ExecuteNonQuery();
+                str_resultado += "Alu ok ";
+                str_resultado += "Dados atualizados com sucesso.";
+
+            }
+            catch (Exception ex) {
+                str_resultado = "Não foi possível atualizar os dados";
+            }
+          return str_resultado;
+        }
 
         public DataTable ListandoDados(bool alunoEspecifico, string consulta)
         {
@@ -117,9 +153,10 @@ namespace BaseKarate
             {
                 conexao.Open();
                 String seleciona_dados = null;
-               // String seleciona_dados = "Select res.Codigo, alu.Nome from Aluno alu join Responsavel res on res.Codigo = alu.CodigoResponsavel";
-               
-                if (alunoEspecifico == false) { 
+                // String seleciona_dados = "Select res.Codigo, alu.Nome from Aluno alu join Responsavel res on res.Codigo = alu.CodigoResponsavel";
+
+                if (alunoEspecifico == false)
+                {
                     seleciona_dados = "SELECT alu.Codigo, " +
                                                  "alu.Nome, " +
                                                  "alu.CPF," +
@@ -129,11 +166,11 @@ namespace BaseKarate
                                                  "alu.Contato, " +
                                                  "res.Nome," +
                                                  "res.Contato, " +
-                                                 "res.CPF," + 
+                                                 "res.CPF," +
                                                  "res.Parentesco, " +
                                                  "alu.Criacao " +
                                                      "FROM Aluno alu " +
-                                                         "JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel";
+                                                         "JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel and alu.Ativo = 1";
                 }
                 else
                 {
@@ -152,7 +189,7 @@ namespace BaseKarate
                                                  "alu.Criacao " +
                                                      "FROM Aluno alu " +
                                                          "JOIN Responsavel res ON res.Codigo = alu.CodigoResponsavel " +
-                                                         "AND (alu.Nome Like '%" + consulta + "%'  OR alu.CPF = '" + consulta + "' OR alu.Codigo = TRY_CAST('" + consulta + "' as int))";
+                                                         "AND (alu.Nome Like '%" + consulta + "%'  OR alu.CPF = '" + consulta + "' OR alu.Codigo = TRY_CAST('" + consulta + "' as int)) and alu.Ativo = 1";
 
                 }
                 DataTable tabela_dados = new DataTable();
@@ -169,6 +206,19 @@ namespace BaseKarate
                 return tabela_dados;
             }
         }
+
+        public void ExcluindoDados(int codigo_aluno)
+        {
+            using (SqlConnection conexao = new SqlConnection(acesso_base))
+            {
+                conexao.Open();
+                string excluir = "UPDATE Aluno set Ativo = 0" +
+                                     "from Aluno where Codigo = " + codigo_aluno;
+
+                SqlCommand excluir_dados = conexao.CreateCommand();
+                excluir_dados.CommandText = excluir;
+                excluir_dados.ExecuteNonQuery();
+            }
+        }
     }
 }
-        

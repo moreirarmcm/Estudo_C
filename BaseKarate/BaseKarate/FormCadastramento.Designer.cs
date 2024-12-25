@@ -274,7 +274,7 @@
             // btnInsert
             // 
             btnInsert.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInsert.Location = new Point(113, 594);
+            btnInsert.Location = new Point(113, 571);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(392, 65);
             btnInsert.TabIndex = 37;

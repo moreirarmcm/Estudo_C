@@ -78,5 +78,16 @@ namespace BaseKarate
             FormCadastramento formCadastramento = new FormCadastramento(codigo_aluno);
             formCadastramento.ShowDialog();
         }
+
+        private void txtConsulta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int codigo_aluno = (int) dataLista.SelectedRows[0].Cells[0].Value;
+            administracao.ExcluindoDados(codigo_aluno);
+        }
     }
 }

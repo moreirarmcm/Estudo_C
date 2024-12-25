@@ -45,6 +45,8 @@
             btnPesquisar = new Button();
             txtConsulta = new TextBox();
             btnAtualizar = new Button();
+            label2 = new Label();
+            btnExcluir = new Button();
             ((System.ComponentModel.ISupportInitialize)dataLista).BeginInit();
             SuspendLayout();
             // 
@@ -53,9 +55,9 @@
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 38);
             label1.Name = "label1";
-            label1.Size = new Size(202, 50);
+            label1.Size = new Size(264, 50);
             label1.TabIndex = 3;
-            label1.Text = "Procurar por nome ou CPF:";
+            label1.Text = "Procurar por nome, CPF ou matrícula:";
             label1.Click += label1_Click;
             // 
             // dataLista
@@ -64,10 +66,10 @@
             dataLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataLista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataLista.Columns.AddRange(new DataGridViewColumn[] { CodigoAluno, NomeAluno, cpfAluno, Graduacao, Nascimento, EnderecoAluno, ContatoAluno, NomeResponsavel, ContatoResponsavel, cpfResponsavel, Parentesco, Criacao });
-            dataLista.Location = new Point(12, 188);
+            dataLista.Location = new Point(12, 91);
             dataLista.Name = "dataLista";
             dataLista.RowHeadersWidth = 51;
-            dataLista.Size = new Size(1247, 366);
+            dataLista.Size = new Size(992, 366);
             dataLista.TabIndex = 4;
             // 
             // CodigoAluno
@@ -154,7 +156,7 @@
             // 
             // btnPesquisar
             // 
-            btnPesquisar.Location = new Point(167, 91);
+            btnPesquisar.Location = new Point(811, 38);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(148, 32);
             btnPesquisar.TabIndex = 5;
@@ -164,27 +166,49 @@
             // 
             // txtConsulta
             // 
-            txtConsulta.Location = new Point(216, 40);
+            txtConsulta.Location = new Point(270, 37);
             txtConsulta.Multiline = true;
             txtConsulta.Name = "txtConsulta";
-            txtConsulta.Size = new Size(389, 32);
+            txtConsulta.Size = new Size(506, 32);
             txtConsulta.TabIndex = 6;
+            txtConsulta.TextChanged += txtConsulta_TextChanged;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.Location = new Point(336, 91);
+            btnAtualizar.Location = new Point(62, 517);
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(148, 32);
+            btnAtualizar.Size = new Size(148, 54);
             btnAtualizar.TabIndex = 7;
-            btnAtualizar.Text = "Alterar dados";
+            btnAtualizar.Text = "Alterar dados do aluno selecionado";
             btnAtualizar.UseVisualStyleBackColor = true;
             btnAtualizar.Click += btnAtualizar_Click;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(12, 473);
+            label2.Name = "label2";
+            label2.Size = new Size(555, 50);
+            label2.TabIndex = 8;
+            label2.Text = "Com um registro selecionado (acima), opte por uma das alternativas abaixo:";
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Location = new Point(235, 517);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(148, 54);
+            btnExcluir.TabIndex = 9;
+            btnExcluir.Text = "Excluir aluno selecionado";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += button1_Click;
             // 
             // FormListagem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1271, 740);
+            Controls.Add(btnExcluir);
+            Controls.Add(label2);
             Controls.Add(btnAtualizar);
             Controls.Add(txtConsulta);
             Controls.Add(btnPesquisar);
@@ -215,5 +239,7 @@
         private Button btnPesquisar;
         private TextBox txtConsulta;
         private Button btnAtualizar;
+        private Label label2;
+        private Button btnExcluir;
     }
 }
